@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .mycontainer {
+      background: #b4b4b4;
+      width: 100%;
+    }
+    .hero {
+      width: 100%;
+      height: 75vh;
+    }
+    .phase {
+      background: #fff;
+    }
+    .phase-box {
+      width: 25%;
+      height: 200px;
+      background-color: #e78394;
+    }
+    .collapsable-boxes .box {
+        background-color: #e78394;
+    }
+  </style>
+  <body>
+    <div class="mycontainer py-3 px-5">
+      <div class="hero bg-white flex flex-col justify-center items-center">
+        <h1 class="text-5xl mb-5">Experiment</h1>
+        <p class="text-2xl">All the protocols</p>
+      </div>
+      <div class="phase mt-5 py-5">
+        <h1 class="text-5xl text-center mb-10">PHASE</h1>
+        <div class="phase-boxes flex justify-between">
+          <div
+            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h1>Phase 1</h1>
+            <p>OMV ===</p>
+          </div>
+          <div
+            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h1>Phase 2</h1>
+            <p>Description</p>
+          </div>
+          <div
+            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h1>Phase 3</h1>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+      <div class="phase-1 mt-5 flex relative">
+        <div class="phase1 absolute left-0 top-1/2 -rotate-90 text-xl">PHASE 1</div>
+        <div class="w-1/4 flex flex-col items-center justify-around">
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+        </div>
+        <div class="w-3/4 h-100 bg-white">
+            <h1 class="text-5xl m-5">Materials</h1>
+            <div class="collapsable-boxes flex flex-col">
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="phase-2 mt-5 flex flex-row-reverse relative">
+        <div class="phase1 absolute right-0 top-1/2 rotate-90 text-xl">PHASE 2</div>
+        <div class="w-1/4 flex flex-col items-center justify-around">
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+        </div>
+        <div class="w-3/4 h-100 bg-white">
+            <h1 class="text-5xl m-5">Stock Solution Preparation</h1>
+            <div class="collapsable-boxes flex flex-col">
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="phase-3 mt-5 flex relative">
+        <div class="phase1 absolute left-0 top-1/2 -rotate-90 text-xl">PHASE 3</div>
+        <div class="w-1/4 flex flex-col items-center justify-around">
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+          <img
+            src="https://static.igem.wiki/teams/4781/wiki/home-bg.png"
+            alt=""
+            class="w-1/2 my-5 rounded-full aspect-square"
+          />
+        </div>
+        <div class="w-3/4 h-100 bg-white">
+            <h1 class="text-5xl m-5">Protocols</h1>
+            <div class="collapsable-boxes flex flex-col">
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Experiment 1</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Experiment 2</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Experiment 3</h1>
+                </div>
+                <div class="box w-100 m-5">
+                    <h1 class="text-2xl m-10 text-white">Experiment 4</h1>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
