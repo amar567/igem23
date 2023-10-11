@@ -1,8 +1,10 @@
+/* @import url('./fonts/MongoDBValueSerif-Regular.woff2'); */
+
 .detailed_description_section{
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
 }
 
@@ -18,14 +20,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--dark-font);
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px;
 }
+
+/* Style the list items when they are active (under focus) */
+.underline {
+    text-decoration: underline;
+}
+
 
 .sticky_index h1{
     text-align: center;
 }
 
 .sticky_index ul{
-    width: 80%;
+    width: 90%;
+    padding-left: 40px;
+}
+
+.h1Index{
+    font-family: "MongoDBValueSerif";
+    color: inherit;
+    text-decoration: underline;
 }
 
 .content_container{
@@ -40,23 +59,29 @@
     align-items: center;
     background-color: white;
     margin: 20px 0;
+    /* align-items: stretch; */
 }
 
 .image_content{
-    width: 80%;
-    padding: 20px 0;
+    width: 90%;
+    margin: 20px 0;
+    border-radius: 20px;
 }
 
 .h1_content{
-    width: 80%;
+    width: 90%;
+    font-family: "MongoDBValueSerif";
+    color: var(--dark-font);
 }
 
 .h2_content{   
-    width: 80%;
+    width: 90%;
+    font-family: "MongoDBValueSerif";
+    color: var(--dark-font);
 }
 
 .p_content{
-    width: 80%;
+    width: 90%;
 }
 
 .equation_container{
@@ -67,6 +92,15 @@
 
 }
 
+.h1-item{
+    font-weight: 900;
+    padding-left: 0px;
+}
+
 .h2-item{
     padding-left: 20px;
+}
+
+.tableContainer{
+    width: 90%;
 }
