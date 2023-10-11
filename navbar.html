@@ -16,14 +16,14 @@
                 <ul class="flex flex-row">
                     <li class="p-1 m-2 cursor-pointer relative group">
                         Home
-                        <ul class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-1 w-40 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <ul class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-1 w-40 opacity-100 transition-all duration-300">
                             <li>Submenu Item 1</li>
                             <li>Submenu Item 2</li>
                             <li>Submenu Item 3</li>
                         </ul>
                     </li>
                     <li class="p-1 m-2 cursor-pointer relative group">Project
-                        <ul class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-1 w-40 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <ul class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-1 w-40 opacity-100 transition-all duration-300">
                             <li class="m-2">Description</li>
                             <li class="m-2">Design</li>
                             <li class="m-2">DBLT</li>
@@ -41,12 +41,29 @@
     </div>
 
     <script>
-        // Toggle visibility of submenu on list item click
         const dropdownItems = document.querySelectorAll('.group');
+        let openSubmenu = null; // Track the currently open submenu
+
+        // Close the dropdown menu when clicking anywhere outside
+        document.addEventListener('click', (event) => {
+            if (openSubmenu && !event.target.closest('.group')) {
+                openSubmenu.classList.add('hidden');
+                openSubmenu = null;
+            }
+        });
+
         dropdownItems.forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (event) => {
                 const submenu = item.querySelector('ul');
+
+                // Close the previously open submenu (if any)
+                if (openSubmenu && openSubmenu !== submenu) {
+                    openSubmenu.classList.add('hidden');
+                }
+
                 submenu.classList.toggle('hidden');
+                openSubmenu = submenu;
+                event.stopPropagation(); // Prevent this click from propagating to the document
             });
         });
     </script>
