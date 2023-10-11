@@ -8,13 +8,13 @@
   </head>
 
   <body class="p-2">
-    <nav class="relative">
+    <nav class="relative z-50 mb-10">
       <div
         class="fixed hidden md:flex justify-between items-center bg-[#E3ABAB] left-2 right-2 rounded-md"
       >
         <div class="ml-4">LOGO</div>
         <div class="mr-4 ml-auto relative">
-          <ul class="flex flex-row">
+          <ul class="flex flex-row mr-10">
             <li class="p-1 m-2 cursor-pointer relative group">Home</li>
             <li class="p-1 m-2 relative group">
               <span class="cursor-pointer">Project</span>
@@ -89,16 +89,21 @@
               </ul>
             </li>
             <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Dry Lab</span>
-              <ul
-                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-                <li class="cursor-pointer">Model</li>
-              </ul>
+              <span class="cursor-pointer">Model</span>
             </li>
             <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Team</span>
-            </li>
+              <span class="cursor-pointer" id="team">Team</span>
+              <ul
+              class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">All Members</li>
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Attribution</li>
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Collaboration</li>
+            </ul>
+          </li>
+          <li class="p-1 m-2 relative group">
+            <span class="cursor-pointer">Awards</span>
+          </li>
           </ul>
         </div>
       </div>
@@ -135,22 +140,12 @@
             </a>
             <a href="https://www.example.com">
               <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                DBLT
+                Engineering Success
               </li>
             </a>
             <a href="https://www.example.com">
               <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Contribution
-              </li>
-            </a>
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Engineeringn
-              </li>
-            </a>
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Implementation
+                Proposed Implementation
               </li>
             </a>
           </ul>
@@ -181,7 +176,7 @@
             class="hidden absolute left-0 mt-4 bg-white border translate-x-40 -translate-y-8 rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
             id="humanpractices-sublist"
           >
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">HD</li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Integrated Human Practices</li>
             <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
               Eucation
             </li>
@@ -191,16 +186,18 @@
           </ul>
         </li>
         <li class="p-1 m-2 relative toggle-submenu" id="drylab">
-          <span class="cursor-pointer">Dry Lab</span>
+          <span class="cursor-pointer">Model</span>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="team">
+          <span class="cursor-pointer" >Team</span>
           <ul
             class="hidden absolute left-0 mt-0 bg-white translate-x-40 -translate-y-6 border rounded-lg py-0 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="drylab-sublist"
+            id="team-sublist"
           >
-            <li class="cursor-pointer toggle-submenu" id="model">Model</li>
+            <li class="cursor-pointer toggle-submenu" id="model">All Members</li>
+            <li class="cursor-pointer toggle-submenu" id="model">Attribution</li>
+            <li class="cursor-pointer toggle-submenu" id="model">Collaboration</li>
           </ul>
-        </li>
-        <li class="p-1 m-2 relative">
-          <span class="cursor-pointer toggle-submenu" id="team">Team</span>
         </li>
       </ul>
     </div>
