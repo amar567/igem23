@@ -59,6 +59,7 @@
     align-items: center;
     background-color: white;
     margin: 20px 0;
+    box-shadow: yellowgreen 2px;
     /* align-items: stretch; */
 }
 
