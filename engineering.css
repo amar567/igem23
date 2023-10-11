@@ -1,5 +1,28 @@
+h1,
+h2 {
+    font-family: "MongoDBValueSerifBold", sans-serif;
+}
+
+p {
+    font-family: "euclidCircular";
+}
+
+.main-container {
+    background: var(--dark-color);
+}
+
 .hero {
     height: 60vh;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.navigation_cards {
+    color: var(--dark-color);
+}
+
+.nav-card {
+    color: var(--dark-color);
 }
 
 .cycles_section {
