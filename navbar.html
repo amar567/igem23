@@ -12,9 +12,16 @@
             <div class="ml-4">
                 LOGO
             </div>
-            <div class="mr-4 ml-auto">
+            <div class="mr-4 ml-auto relative">
                 <ul class="flex flex-row">
-                    <li class="p-1 m-2 cursor-pointer">Home</li>
+                    <li class="p-1 m-2 cursor-pointer relative group">
+                        Home
+                        <ul class="hidden absolute left-0 mt-3 bg-white border rounded-lg py-1 px-2 space-y-1 w-auto opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <li>Submenu Item 1</li>
+                            <li>Submenu Item 2</li>
+                            <li>Submenu Item 3</li>
+                        </ul>
+                    </li>
                     <li class="p-1 m-2 cursor-pointer">Project</li>
                     <li class="p-1 m-2 cursor-pointer">Wet Lab</li>
                     <li class="p-1 m-2 cursor-pointer">Human Practices</li>
@@ -24,5 +31,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Toggle visibility of submenu on list item click
+        const dropdownItems = document.querySelectorAll('.group');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const submenu = item.querySelector('ul');
+                submenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
 </body>
 </html>
