@@ -5,37 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment</title>
     <script src="./tailwind.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../description.css">
+    <link rel="stylesheet" href="../katex/katex.min.css">
+
+    <script src="../katex/katex.min.js"></script>
+    <script src="../katex/contrib/auto-render.min.js"></script>
+    <script src="../katex/contrib/mhchem.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+        src="https://res.cloudinary.com/positionrelativ/raw/upload/v1492377595/jquery.rwdImageMaps_lq5sye.js"></script>
   </head>
   <style>
+    @font-face {
+      font-family: "MongoDBValueSerifBold";
+      src: url('../fonts/MongoDBValueSerif-Bold.woff2');
+    }
     * {
       margin: 0;
       padding: 0;
+      --dark-color: #001E2B;
+      --light-color: #fff;
+      --bright-green: #00ED64;
     }
     .mycontainer {
-      background: #b4b4b4;
+      font-family: "MongoDBValueSerifBold", sans-serif;
+      background: var(--dark-color);
       width: 100%;
     }
     .hero {
       width: 100%;
       height: 75vh;
+      border-radius: 10px;
+      background: var(--dark-color);
+      color: var(--light-color);
     }
     .phase {
-      background: #fff;
+      background-color: var(--light-color);
+      color: var(--dark-color);
+      border-radius: 10px;
     }
     .phase-box {
       width: 25%;
       height: 200px;
-      background-color: #e78394;
+      background-color: var(--dark-color);
+      color: var(--light-color);
       cursor: pointer;
+      border-radius: 10px;
+    }
+    .phase-tag {
+      background-color: var(--bright-green);
+      color: var(--dark-color);
+    }
+    .phase-section {
+      background-color: var(--light-color);
     }
     .collapsable-boxes .box {
-        background-color: #e78394;
+        background-color: var(--dark-color);
         cursor: pointer;
+        border-radius: 10px;
     }
     .drop-down {
       background-color: #e6e6e6;
       overflow: hidden;
       padding: 1rem;
+      border-radius: 10px;
     }
     .drop-down .drop-down-content {
       padding-bottom: 5rem;
@@ -43,27 +78,27 @@
   </style>
   <body>
     <div class="mycontainer py-3 px-5">
-      <div class="hero bg-white flex flex-col justify-center items-center">
-        <h1 class="text-5xl mb-5">Experiment</h1>
-        <p class="text-2xl">All the protocols</p>
+      <div class="hero flex flex-col justify-center items-center">
+        <h1 class="text-8xl mb-10">Experiment</h1>
+        <p class="text-3xl">All the protocols</p>
       </div>
       <div class="phase mt-5 py-5">
         <h1 class="text-5xl text-center mb-10">PHASE</h1>
-        <div class="phase-boxes flex justify-between">
+        <div class="phase-boxes flex justify-around">
           <div
-            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+            class="phase-box flex flex-col justify-center items-center text-3xl"
           >
             <h1>Phase 1</h1>
             <p>OMV ===</p>
           </div>
           <div
-            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+            class="phase-box flex flex-col justify-center items-center text-3xl"
           >
             <h1>Phase 2</h1>
             <p>Description</p>
           </div>
           <div
-            class="phase-box flex flex-col justify-center items-center text-3xl text-white"
+            class="phase-box flex flex-col justify-center items-center text-3xl"
           >
             <h1>Phase 3</h1>
             <p>Description</p>
@@ -71,7 +106,7 @@
         </div>
       </div>
       <div class="phase-1 mt-5 flex relative">
-        <div class="phase1 absolute left-0 top-1/2 -rotate-90 text-xl">PHASE 1</div>
+        <div class="absolute left-0 top-1/2 -rotate-90 text-xl px-3 py-2 rounded-[5px] phase-tag">PHASE 1</div>
         <div class="w-1/4 flex flex-col items-center justify-center">
           <img
             src="https://source.unsplash.com/featured/1"
@@ -89,7 +124,7 @@
             class="w-1/2 my-5 rounded-full aspect-square"
           />
         </div>
-        <div class="w-3/4 h-100 pb-10 bg-white">
+        <div class="phase-section w-3/4 h-100 pb-10 rounded-[10px]">
             <h1 class="text-5xl m-5">Materials</h1>
             <div class="collapsable-boxes flex flex-col">
                 <div class="box w-100 mx-5 mt-10 mb-0">
@@ -97,39 +132,61 @@
                 </div>
                 <div class="drop-down mx-5 hidden">
                   <div class="drop-down-content">
-                    <div
-                  class="flex flex-col items-center w-full border p-5 m-5 bg-slate-100 rounded-md shadow-2xl"
-                >
-                  <div class="flex flex-col sm:w-2/3">
-                    <div>
-                      <h2
-                        class="h2 text-accent text-xl font-semibold mb-3 uppercase"
-                      >
-                        Section
-                      </h2>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facere impedit cumque fuga doloremque quidem voluptates
-                      fugiat odit, debitis expedita eum quis ut blanditiis
-                      minima pariatur nulla nesciunt. Impedit, esse laboriosam!
-                      <br />
-                      <br />
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Non dolorem tempore porro delectus libero. Qui omnis quis,
-                      voluptates pariatur voluptas doloribus est ipsa quae.
-                      Corporis quam accusantium quia maxime earum!
-                    </p>
+                    <div class="content_section">
+                      <h1 class="h1_content">This is a short heading of this section</h1>
+                      <h2 class="h2_content">This is an example subheading in the section</h2>
+                      <p class="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum soluta vel iusto
+                          incidunt similique recusandae quibusdam laboriosam totam amet deleniti reiciendis consequuntur quo,
+                          aspernatur doloremque, aliquid dolores alias molestiae quam harum repudiandae dicta! Repellat quia
+                          quos distinctio corrupti quo officia dignissimos voluptatem porro! Modi, quae voluptates quaerat
+                          aperiam nemo praesentium? Tempore, numquam! Obcaecati, repellendus modi. Quo sint perspiciatis non
+                          quis?</p>
+                      <h2 class="h2_content">This is an example subheading in the section</h2>
+                      <p class="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum soluta vel iusto
+                          incidunt similique recusandae quibusdam laboriosam totam amet deleniti reiciendis consequuntur quo,
+                          aspernatur doloremque, aliquid dolores alias molestiae quam harum repudiandae dicta! Repellat quia
+                          quos distinctio corrupti quo officia dignissimos voluptatem porro! Modi, quae voluptates quaerat
+                          aperiam nemo praesentium? Tempore, numquam! Obcaecati, repellendus modi. Quo sint perspiciatis non
+                          quis?</p>
+                      <img class="image_content" src="./placeholder.png" alt="">
+                      <p class="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum soluta vel iusto
+                          incidunt similique recusandae quibusdam laboriosam totam amet deleniti reiciendis consequuntur quo,
+                          aspernatur doloremque, aliquid dolores alias molestiae quam harum repudiandae dicta! Repellat quia
+                          quos distinctio corrupti quo officia dignissimos voluptatem porro! Modi, quae voluptates quaerat
+                          aperiam nemo praesentium? Tempore, numquam! Obcaecati, repellendus modi. Quo sint perspiciatis non
+                          quis?</p>
+                      <div class="equation_container">
+                          <span class="equation">
+                              $${
+                              \relax{x} = \int_{-\infty}^\infty
+                              \hat\xi\,e^{2 \pi i \xi x}
+                              \,d\xi x_i}
+                              $$
+                          </span>
+                          <span class="equation">
+                              $${\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}}$$
+                          </span>
+                          <span class="equation">
+                              $${\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}}$$
+                          </span>
+                      </div>
+                      <h1 class="h1_content">This is a short heading of this section</h1>
+                      <h2 class="h2_content">This is an example subheading in the section</h2>
+                      <p class="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum soluta vel iusto
+                          incidunt similique recusandae quibusdam laboriosam totam amet deleniti reiciendis consequuntur quo,
+                          aspernatur doloremque, aliquid dolores alias molestiae quam harum repudiandae dicta! Repellat quia
+                          quos distinctio corrupti quo officia dignissimos voluptatem porro! Modi, quae voluptates quaerat
+                          aperiam nemo praesentium? Tempore, numquam! Obcaecati, repellendus modi. Quo sint perspiciatis non
+                          quis?</p>
+                      <h2 class="h2_content">This is an example subheading in the section</h2>
+                      <p class="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum soluta vel iusto
+                          incidunt similique recusandae quibusdam laboriosam totam amet deleniti reiciendis consequuntur quo,
+                          aspernatur doloremque, aliquid dolores alias molestiae quam harum repudiandae dicta! Repellat quia
+                          quos distinctio corrupti quo officia dignissimos voluptatem porro! Modi, quae voluptates quaerat
+                          aperiam nemo praesentium? Tempore, numquam! Obcaecati, repellendus modi. Quo sint perspiciatis non
+                          quis?</p>
+                      <img class="image_content" src="./placeholder.png" alt="">
                   </div>
-                  <div
-                    class="flex scale-75 bg-current ml-0 sm:ml-1 mt-1 sm:mt-0 rounded-md max-h-[60vh]"
-                  >
-                    <img
-                      src="https://source.unsplash.com/random/880x600?apple"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
                   </div>
                 </div>
                 <div class="box w-100 mx-5 mt-10 mb-0">
@@ -155,7 +212,7 @@
       </div>
 
       <div class="phase-2 mt-5 flex flex-row-reverse relative">
-        <div class="phase1 absolute right-0 top-1/2 rotate-90 text-xl">PHASE 2</div>
+        <div class="absolute right-0 top-1/2 rotate-90 text-xl px-3 py-2 rounded-[5px] phase-tag">PHASE 2</div>
         <div class="w-1/4 flex flex-col items-center justify-center">
           <img
             src="https://source.unsplash.com/featured/1"
@@ -173,7 +230,7 @@
             class="w-1/2 my-5 rounded-full aspect-square"
           />
         </div>
-        <div class="w-3/4 h-100 pb-10 bg-white">
+        <div class="phase-section w-3/4 h-100 pb-10 rounded-[10px]">
             <h1 class="text-5xl m-5">Stock Solution Preparation</h1>
             <div class="collapsable-boxes flex flex-col">
                 <div class="box w-100 mx-5 mt-10 mb-0">
@@ -205,7 +262,7 @@
       </div>
 
       <div class="phase-3 mt-5 flex relative">
-        <div class="phase1 absolute left-0 top-1/2 -rotate-90 text-xl">PHASE 3</div>
+        <div class="phase1 absolute left-0 top-1/2 -rotate-90 text-xl px-3 py-2 rounded-[5px] phase-tag">PHASE 3</div>
         <div class="w-1/4 flex flex-col items-center justify-center">
           <img
             src="https://source.unsplash.com/featured/1"
@@ -223,8 +280,8 @@
             class="w-1/2 my-5 rounded-full aspect-square"
           />
         </div>
-        <div class="w-3/4 h-100 pb-10 bg-white">
-            <h1 class="text-5xl m-5">Protocols</h1>
+        <div class="phase-section w-3/4 h-100 pb-10 rounded-[10px]">
+            <h1 class="protocols-phase text-5xl m-5">Protocols</h1>
             <div class="collapsable-boxes flex flex-col">
                 <div class="box w-100 mx-5 mt-10 mb-0">
                     <h1 class="text-2xl m-10 text-white">Experiment 1</h1>
@@ -276,5 +333,40 @@
         });
       });
     </script>
+
+    <script src="./main.js"></script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true }
+            ]
+        });
+    </script>
+    <script src="./table.js"></script>
+    <script>
+        // Sample CSV data (you can replace this with your CSV file)
+        const csvData = `Name,URL,Description
+                        John,http://example.com/john,Software Engineer
+                        Alice,http://example.com/alice,Web Developer
+                        Bob,http://example.com/bob,Data Analyst`;
+
+        renderTable(csvData, 'csvTableContainer')
+    </script>
+    <script>
+        // $(document).ready(function (e) {
+        //     $('rect').on('focus', function (e) {
+        //         e.preventDefault();
+        //         alert($(this).attr('id'))
+        //         // $('.selection p').html($(this).attr('class'));
+        //     });
+
+        // });
+
+    </script>
+    <script src="./indexMaker.js"></script>
   </body>
 </html>
