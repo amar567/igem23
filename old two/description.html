@@ -9,19 +9,49 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./description2.css">
     <link rel="stylesheet" href="./katex/katex.min.css">
+    <link rel="stylesheet" href="./hamburger.css">
 
-    <script src="./katex/katex.min.js"></script>
-    <script src="./katex/contrib/auto-render.min.js"></script>
-    <script src="./katex/contrib/mhchem.min.js"></script>
+    <script src="../old two/katex/katex.min.js"></script>
+    <script src="../old two/katex/contrib/auto-render.min.js"></script>
+    <script src="../old two/katex/contrib/mhchem.min.js"></script>
     <script src="./tailwind.js"></script>
+
+    <script src="../old two/js/jquery.min.js"></script>
+    <script src="../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <script src='../old two/js/sketch.min.js'></script>
 </head>
 
 <body>
+    <header class="nav_Container" id="nav_Container">
+        <nav class="menu--right" role="navigation">
+            <div class="menuToggle">
+                <input type="checkbox" onclick="hide()" />
+                <span class="" style="background-color: #FFC000" id="span1"></span>
+                <span class="" style="background-color: #FFC000" id="span2"></span>
+                <span class="" style="background-color: #FFC000" id="span3"></span>
+                <div class="menuItem">
+                    <ul class="clear_ul">
+                        <li><a href="#">PROJECT</a></li>
+                        <li><a href="#">WET LAB</a></li>
+                        <li><a href="#">DRY LAB</a></li>
+                        <li><a href="#">HUMAN PRACTICES</a></li>
+                        <li><a href="#">TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown hidden" id="dropdown">
+            <ul class="clear_ul" id="dropDown_ul">
+            </ul>
+        </div>
+    </header>
+    <div class="" style="background-image: url(../3.png);height: 100vh;width: 100%vw">
+        <img src="./thumbnails/2.png" alt="" style="width: 100vw;height: 100vh;">
+    </div>
+
+    <br><br>
     <div class="main-container flex flex-col pt-10 px-20 w-full pb-20">
-        <div class="hero flex flex-col items-center mb-10">
-            <!-- navbar -->
-            <h1 class="title text-center mt-20 mb-5 text-8xl">Project Description</h1>
-            <p class="subtitle text-center mb-10 text-3xl">A brief idea about how we approached our project</p>
+        <!-- <div class="hero flex flex-col items-center mb-10">
             <div class="flex justify-between w-1/2 mb-12 navigation_cards" style="color: var(--light-color);">
                 <div class="nav-design nav-card w-[23%] aspect-square flex items-center justify-center hover:cursor-pointer"
                     style="background: var(--dark-color);">
@@ -40,157 +70,319 @@
                     <p class="text-3xl">Solution</p>
                 </div>
             </div>
-            <div>
-                <div
-                    class="flex flex-col sm:flex-row w-full border py-10 px-5 my-5 bg-slate-100 rounded-md shadow-2xl bg-white">
-                    <div class="flex flex-col sm:w-2/3 pr-10 ">
-                        <div>
-                            <h2 class="h2 text-accent text-3xl font-semibold mb-10 uppercase">Background</h2>
-                        </div>
-                        <p class="text-2xl leading-10">
-                            In India, agriculture is of utmost importance for several compelling reasons. Economically,
-                            it stands as a formidable pillar, engaging over half of India's workforce and contributing a
-                            substantial 20% to the nation's GDP, showcasing its pivotal role in powering its economic
-                            engine. This year, our team wanted to focus on the importance of Rice Agriculture in India.
-                            Rice (Oryza sativa L.), which provides 20% of all calories ingested, is the primary diet for
-                            nearly half of the world's population. In 2000, there were 600 million tonnes of rice
-                            produced worldwide; by 2030, with a 1.5-fold growth, there may be 904 million tonnes
-                            produced (1).
+        </div> -->
 
-                            <br />
-                            <br />
-                            Asia is the region where most of the world's rice is produced and farmed. The goal of
-                            increasing production while reducing losses seems extremely compelling given the projected
-                            34% rise in global population to 9.3 billion people by 2050 (2), as well as the known threat
-                            of increased pathogen and pest introductions due to various factors like increased human
-                            mobility, global trade, and climate change. Therefore, it is essential that any future crop
-                            management measures properly consider the danger posed by both existing and emerging crop
-                            diseases and pests.
+        <div>
+            <div
+                class="flex flex-col sm:flex-row w-full border py-10 px-5 my-5 bg-slate-100 rounded-md shadow-2xl bg-white">
+                <div class="flex flex-col sm:w-2/3 pr-10 ">
+                    <div>
+                        <h2 class="h2 text-accent text-3xl font-semibold mb-10 uppercase">Background</h2>
+                    </div>
+                    <p class="text-2xl leading-10">
+                        In India, agriculture is of utmost importance for several compelling reasons. Economically,
+                        it stands as a formidable pillar, engaging over half of India's workforce and contributing a
+                        substantial 20% to the nation's GDP, showcasing its pivotal role in powering its economic
+                        engine. This year, our team wanted to focus on the importance of Rice Agriculture in India.
+                        Rice (Oryza sativa L.), which provides 20% of all calories ingested, is the primary diet for
+                        nearly half of the world's population. In 2000, there were 600 million tonnes of rice
+                        produced worldwide; by 2030, with a 1.5-fold growth, there may be 904 million tonnes
+                        produced (1).
 
-                        </p>
-                        <br>
-                        <br>
-                    </div>
-                    <div class="flex-col ml-0 sm:ml-1 sm:mt-0 border-2 border-slate-300 p-5">
-                        <img src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-2.png"
-                            alt="Image" />
-                    </div>
+                        <br />
+                        <br />
+                        Asia is the region where most of the world's rice is produced and farmed. The goal of
+                        increasing production while reducing losses seems extremely compelling given the projected
+                        34% rise in global population to 9.3 billion people by 2050 (2), as well as the known threat
+                        of increased pathogen and pest introductions due to various factors like increased human
+                        mobility, global trade, and climate change. Therefore, it is essential that any future crop
+                        management measures properly consider the danger posed by both existing and emerging crop
+                        diseases and pests.
+
+                    </p>
+                    <br>
+                    <br>
                 </div>
-            </div>
-            <div class="pdfs_section mt-10">
-                <div class="sticky_index_container">
-                    <div class="sticky_index p-10"
-                        style="min-height: 500px; box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="text-3xl">
-                            Contents
-                        </h1>
-                    </div>
-                </div>
-                <div class="content_container">
-                    <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">Inspiration</h1>
-                        <p class="p_content mt-5 text-2xl">In the realm of agriculture, synthetic biology offers
-                            exciting possibilities, especially when focusing on vital crops like rice. In our
-                            brainstorming phase, we had the privilege of attending a talk by Dr. Kutubuddin A Molla, an
-                            expert in genome engineering using CRISPR-Cas systems for rice plants. His talk sparked our
-                            interest in exploring CRISPR technology and its application to tackle various diseases
-                            affecting rice plants. Given our proximity to rice farming communities, we took the
-                            initiative to engage with local rice farmers and understand the challenges they face. We
-                            discovered alarming issues like pesticide misuse and the adverse effects of chemical
-                            pesticides on rice crops. Many of our team members have family members involved in farming,
-                            which deepened our understanding of the problems at hand. Through these conversations, we
-                            identified a concerning issue - bacterial blight, caused by the Xanthomonas oryzae pv oryzae
-                            bacteria, posing a significant threat to rice cultivation.</p>
-                    </div>
-                    <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">The Problem - <em>Xanthomonas Oryzae</em></h1>
-                        <p class="p_content mt-5 text-2xl">Infections caused by Xanthomonas species, particularly
-                            Xanthomonas oryzae pv oryzae, pose a significant problem in agriculture, specifically in
-                            rice farming. This bacterium is responsible for bacterial blight, a devastating disease
-                            affecting rice plants. Bacterial blight manifests as water-soaked lesions on leaves,
-                            eventually leading to wilting, browning, and death of the plant's tissue. The disease
-                            disrupts photosynthesis and nutrient transportation, severely impacting crop yield and
-                            quality. In Southeast Asian countries, yield losses are expected to range from 10%–20% in
-                            middling conditions to up to 50% in favorable conditions. The earlier the disease manifests
-                            itself, the greater the yield loss.</p>
-                        <img class="w-1/2 rounded-xl mt-10"
-                            src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-1.png" alt="">
-                        <p class="p_content mt-5 text-2xl">There are about 27 different plant species that are affected
-                            by Xanthomonas infections. These
-                            species display high levels of genetic diversity, damaging up to 400 different plant species
-                            (3). Hence, during our design, we had in mind to design our bio-control agent not just
-                            limited to Xanthomonas oryzae, but also to target it against other virulence factors across
-                            the conserved species.
-                            One of the well-known interesting facts is the bacteriophytochrome-mediated mechanism used
-                            by the <i>Xanthomonas</i> infection method. It is hypothesised that day-night variations
-                            play a crucial role in <i>Xanthomonas</i> infections. If these changes are altered due to
-                            climate change there can be a significant rise in the infections taking place.(13)
-
-                            We wanted to help our farmers in Agricultural field by doing something that would reduce
-                            bacterial blight infections and in turn reduce losses they suffer due to it.
-                            This motivated us to create our novel solution:
-                        </p>
-                    </div>
-                    <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">Xanthacinator</h1>
-                        <p class="p_content mt-5 text-2xl">Xanthacinator is a two fold solution against Bacterial
-                            Blight. Xanthacinator has been designed around the feedback from stakeholders of the
-                            agriculture industry to make it user friendly. It involves a Detection kit and a novel
-                            Biocontrol Agent.</p>
-                        <h2 class="h2_content uppercase text-2xl font-semibold mt-10">Detection:</h2>
-                        <p class="p_content text-2xl mt-5">In order to curb the crucial lack of knowledge to properly
-                            distinguish
-                            between nutrient
-                            deficiency and bacterial blight, we developed a detection kit that uses an engineered E
-                            coli. The engineered E. coli is capable of detecting quorum sensing molecules, Diffusible
-                            Signal Factors (DSF) released by Xoo. In presence of DSF molecules, it activates the
-                            downstream genes which gives bright purple fluorescence visible to naked eyes.</p>
-                        <img src="https://static.igem.wiki/teams/4781/wiki/team-igem-iiser-kolkata-aiim.png" alt=""
-                            class="mt-5 w-1/2">
-                        <img src="https://static.igem.wiki/teams/4781/wiki/detection-circuit-2.png" alt=""
-                            class="mt-5 w-1/2">
-                        <h2 class="h2_content uppercase text-2xl font-semibold mt-10">Biocontrol agent:</h2>
-                        <p class="p_content mt-10 text-2xl">1. Outer Membrane Vesicles (OMVs):</p>
-                        <ol class="text-2xl w-[80%] mt-5">
-                            <li>Our project is inspired from nature. Escherichia coli being a gram negative bacteria has
-                                a natural property of production of Bacterial Outer Membrane Vesicles (OMVs).</li>
-                            <li>
-                                OMVs are used to transfer various biomolecules, including DNA, toxins, and virulence
-                                factors for intra- and inter-species communication. [4].
-                            </li>
-                            <li>An advantage of OMVs as a delivery vector is their protective role for DNA, RNA, and
-                                proteins, safeguarding them from harsh conditions. [5]</li>
-                            <li>We decided to utilize this intrinsic property of E. coli and use it for our needs as a
-                                delivery vector of our target molecules which is the FnCas12a/crRNA complex. </li>
-                        </ol>
-                        <img src="https://static.igem.wiki/teams/4781/wiki/omv-diagram.jpg" alt="" class="mt-5 w-1/2">
-                        <p class="p_content text-xl text-center">Figure: Schematic representation of Bacterial Outer
-                            Membrane Vesicles [7]</p>
-                        <p class="p_content mt-10 text-2xl">2. FnCas12a</p>
-                        <p class="p_content mt-10 text-2xl">Another amazing natural machinery of nature is CRISPR
-                            (Clustered Regularly
-                            Interspersed Short Palindromic Repeats). In contrast to the more popular CRISPR-Cas9, Cas12a
-                            offers many advantages:</p>
-                        <ol class="text-2xl w-[80%] mt-5">
-                            <li>Cas12a can indiscriminately degrade single-stranded DNA in addition to its primary
-                                function of cleaving double-stranded DNA</li>
-                            <li>
-                                It has a smaller size of ~130 kDa than Cas9 which has a size of ~160 kDa [7, 8]
-                            </li>
-                            <li>Unlike Cas9, Cas12a processes its own mature crRNA without requiring any tracrRNA [9]
-                            </li>
-                            <li>And hence makes it advantageous to use it for multiplex genome editing </li>
-                            <li>Our engineered E. coli releases OMVs loaded with CRISPR-FnCas12a with crRNA complex.The
-                                Crispr-RNAs are designed against multiple pathogenic genes of Xanthomonas. </li>
-                        </ol>
-                        <img src="https://static.igem.wiki/teams/4781/wiki/omv-diagram.jpg" alt="" class="mt-5 w-1/2">
-                        <p class="p_content text-xl text-center">Figure: Schematic representation of Bacterial Outer
-                            Membrane Vesicles [7]</p>
-                    </div>
+                <div class="flex-col ml-0 sm:ml-1 sm:mt-0 border-2 border-slate-300 p-5">
+                    <img src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-2.png" alt="Image" />
                 </div>
             </div>
         </div>
+        <div class="pdfs_section mt-10">
+            <div class="sticky_index_container">
+                <div class="sticky_index p-10"
+                    style="min-height: 500px; box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
+                    <h1 class="text-3xl">
+                        Contents
+                    </h1>
+                </div>
+            </div>
+            <div class="content_container">
+                <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
+                    <h1 class="h1_content text-3xl font-semibold">Inspiration</h1>
+                    <p class="p_content mt-5 text-2xl">In the realm of agriculture, synthetic biology offers
+                        exciting possibilities, especially when focusing on vital crops like rice. In our
+                        brainstorming phase, we had the privilege of attending a talk by Dr. Kutubuddin A Molla, an
+                        expert in genome engineering using CRISPR-Cas systems for rice plants. His talk sparked our
+                        interest in exploring CRISPR technology and its application to tackle various diseases
+                        affecting rice plants. Given our proximity to rice farming communities, we took the
+                        initiative to engage with local rice farmers and understand the challenges they face. We
+                        discovered alarming issues like pesticide misuse and the adverse effects of chemical
+                        pesticides on rice crops. Many of our team members have family members involved in farming,
+                        which deepened our understanding of the problems at hand. Through these conversations, we
+                        identified a concerning issue - bacterial blight, caused by the Xanthomonas oryzae pv oryzae
+                        bacteria, posing a significant threat to rice cultivation.</p>
+                </div>
+                <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
+                    <h1 class="h1_content text-3xl font-semibold">The Problem - <em>Xanthomonas Oryzae</em></h1>
+                    <p class="p_content mt-5 text-2xl">Infections caused by Xanthomonas species, particularly
+                        Xanthomonas oryzae pv oryzae, pose a significant problem in agriculture, specifically in
+                        rice farming. This bacterium is responsible for bacterial blight, a devastating disease
+                        affecting rice plants. Bacterial blight manifests as water-soaked lesions on leaves,
+                        eventually leading to wilting, browning, and death of the plant's tissue. The disease
+                        disrupts photosynthesis and nutrient transportation, severely impacting crop yield and
+                        quality. In Southeast Asian countries, yield losses are expected to range from 10%–20% in
+                        middling conditions to up to 50% in favorable conditions. The earlier the disease manifests
+                        itself, the greater the yield loss.</p>
+                    <img class="w-1/2 rounded-xl mt-10"
+                        src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-1.png" alt="">
+                    <p class="p_content mt-5 text-2xl">There are about 27 different plant species that are affected
+                        by Xanthomonas infections. These
+                        species display high levels of genetic diversity, damaging up to 400 different plant species
+                        (3). Hence, during our design, we had in mind to design our bio-control agent not just
+                        limited to Xanthomonas oryzae, but also to target it against other virulence factors across
+                        the conserved species.
+                        One of the well-known interesting facts is the bacteriophytochrome-mediated mechanism used
+                        by the <i>Xanthomonas</i> infection method. It is hypothesised that day-night variations
+                        play a crucial role in <i>Xanthomonas</i> infections. If these changes are altered due to
+                        climate change there can be a significant rise in the infections taking place.(13)
+
+                        We wanted to help our farmers in Agricultural field by doing something that would reduce
+                        bacterial blight infections and in turn reduce losses they suffer due to it.
+                        This motivated us to create our novel solution:
+                    </p>
+                </div>
+                <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
+                    <h1 class="h1_content text-3xl font-semibold">Xanthacinator</h1>
+                    <p class="p_content mt-5 text-2xl">Xanthacinator is a two fold solution against Bacterial
+                        Blight. Xanthacinator has been designed around the feedback from stakeholders of the
+                        agriculture industry to make it user friendly. It involves a Detection kit and a novel
+                        Biocontrol Agent.</p>
+                    <h2 class="h2_content uppercase text-2xl font-semibold mt-10">Detection</h2>
+                    <p class="p_content text-2xl mt-5">In order to curb the crucial lack of knowledge to properly
+                        distinguish
+                        between nutrient
+                        deficiency and bacterial blight, we developed a detection kit that uses an engineered E
+                        coli. The engineered E. coli is capable of detecting quorum sensing molecules, Diffusible
+                        Signal Factors (DSF) released by Xoo. In presence of DSF molecules, it activates the
+                        downstream genes which gives bright purple fluorescence visible to naked eyes.</p>
+                    <img src="https://static.igem.wiki/teams/4781/wiki/team-igem-iiser-kolkata-aiim.png" alt=""
+                        class="mt-5 w-1/2">
+                    <img src="https://static.igem.wiki/teams/4781/wiki/detection-circuit-2.png" alt=""
+                        class="mt-5 w-1/2">
+                    <h2 class="h2_content uppercase text-2xl font-semibold mt-10">Biocontrol agent</h2>
+                    <p class="p_content mt-10 text-2xl">1. Outer Membrane Vesicles (OMVs):</p>
+                    <ol class="text-2xl w-[80%] mt-5">
+                        <li>Our project is inspired from nature. Escherichia coli being a gram negative bacteria has
+                            a natural property of production of Bacterial Outer Membrane Vesicles (OMVs).</li>
+                        <li>
+                            OMVs are used to transfer various biomolecules, including DNA, toxins, and virulence
+                            factors for intra- and inter-species communication. [4].
+                        </li>
+                        <li>An advantage of OMVs as a delivery vector is their protective role for DNA, RNA, and
+                            proteins, safeguarding them from harsh conditions. [5]</li>
+                        <li>We decided to utilize this intrinsic property of E. coli and use it for our needs as a
+                            delivery vector of our target molecules which is the FnCas12a/crRNA complex. </li>
+                    </ol>
+                    <img src="https://static.igem.wiki/teams/4781/wiki/omv-diagram.jpg" alt="" class="mt-5 w-1/2">
+                    <p class="p_content text-xl text-center">Figure: Schematic representation of Bacterial Outer
+                        Membrane Vesicles [7]</p>
+                    <p class="p_content mt-10 text-2xl">2. FnCas12a</p>
+                    <p class="p_content mt-10 text-2xl">Another amazing natural machinery of nature is CRISPR
+                        (Clustered Regularly
+                        Interspersed Short Palindromic Repeats). In contrast to the more popular CRISPR-Cas9, Cas12a
+                        offers many advantages:</p>
+                    <ol class="text-2xl w-[80%] mt-5">
+                        <li>Cas12a can indiscriminately degrade single-stranded DNA in addition to its primary
+                            function of cleaving double-stranded DNA</li>
+                        <li>
+                            It has a smaller size of ~130 kDa than Cas9 which has a size of ~160 kDa [7, 8]
+                        </li>
+                        <li>Unlike Cas9, Cas12a processes its own mature crRNA without requiring any tracrRNA [9]
+                        </li>
+                        <li>And hence makes it advantageous to use it for multiplex genome editing </li>
+                        <li>Our engineered E. coli releases OMVs loaded with CRISPR-FnCas12a with crRNA complex.The
+                            Crispr-RNAs are designed against multiple pathogenic genes of Xanthomonas. </li>
+                    </ol>
+                    <img src="https://static.igem.wiki/teams/4781/wiki/cas12a-diagram.png" alt="" class="mt-5 w-1/2">
+                    <p class="p_content text-xl text-center">Figure: The diagram illustrates Cas12a (Cpf1) alongside
+                        a crRNA that is bound and targeting a specific genomic location. [14]</p>
+                    <p class="p_content mt-10 text-2xl">3. Twin-Arginine Translocation Pathway- for loading into
+                        OMVs
+                    </p>
+                    <ol class="text-2xl w-[80%] mt-5">
+                        <li>Twin Arginine Translocation (Tat) pathway is an effective
+                            pathway to transport folded proteins across the inner membrane, preserving their native
+                            conformation.</li>
+                        <li>
+                            The Tat machinery in Escherichia coli consists of three essential proteins: TatA, TatB,
+                            and TatC. The TatBC complex interacts with Tat substrate proteins by recognizing their
+                            signal peptides.
+                        </li>
+                        <li>Once activated. TatA can create an aqueous channel for substrate transport. [10]
+                        </li>
+                        <li>Our recombinant protein is fused with sptorA signal peptide for its efficient transport
+                            across the membrane into periplasmic space. Once loaded into the periplasmic space, the
+                            recombinant proteins can get loaded into the Outer Membrane Vesicles. [11]
+                        </li>
+                    </ol>
+                    <img src="https://static.igem.wiki/teams/4781/wiki/tat.jpg" alt="" class="mt-5 w-1/2">
+                    <p class="p_content text-xl text-center mt-5">Figure: Mechanism of how TAT complex works in
+                        translocating
+                        proteins fused with a Tat signal peptide from cytoplasm to periplasmic space [15]</p>
+                    <h2 class="h2_content uppercase text-2xl font-semibold mt-10">How does our Biocontrol agent
+                        work?
+                    </h2>
+                    <p class="p_content text-2xl w-[80%] mt-5">Our chassis, Escherichia coli USML2, is a rice
+                        plant growth-promoting endophyte. It grows in the inner leaf surfaces and the interior of
+                        the plant tissues and thus shares the same niche as Xoo (pathogen)
+                        Upon sensing the presence of Xoo, our 'chassis' releases OMVs that carry CRISPR
+                        Fncas12a/crRNA ribonucleoprotein complex. These packages work like tiny missiles to target
+                        and eliminate the harmful Xanthomonas pathogen.
+                    </p>
+                    <img src="https://static.igem.wiki/teams/4781/wiki/engineering-success/ecoli-to-xoo-20-recommended-3x-rife-rife4-0-60fps-1.gif"
+                        alt="" class="mt-5 w-1/2">
+                    <h2 class="h2_content uppercase text-2xl font-semibold mt-10">PROJECT POTENTIAL AND
+                        POSSIBILITIES
+                    </h2>
+                    <p class="p_content text-2xl w-[80%] mt-5">We have shown application of our project for one such
+                        model phytopathogen, i.e. Xoo. However our project can be expanded to be used against many
+                        more phytopathogens. Not only this, our project sets a primer to use Bacterial OMVs as
+                        delivery vehicles. However they can be used for many more applications like:
+                    </p>
+                    <p class="text-2xl w-[80%] mt-5">OMVs have diverse biomedical applications, including vaccines,
+                        adjuvants, cancer
+                        immunotherapy, drug delivery, anti-bacterial adhesion agents, and antibacterial therapy.<br>
+                        OMVs can serve as effective vaccines against pathogenic bacteria, inducing both cellular and
+                        humoral immune responses.<br>
+                        As adjuvants, OMVs enhance immune responses when mixed with antigens in vaccine
+                        preparations.<br>
+                        In cancer immunotherapy, OMVs can induce immune responses against tumor tissues or serve as
+                        nanocarriers for loading chemotherapeutic agents. [12]
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="references mt-10">
+            <h1 class="text-5xl font-semibold text-center">References</h1>
+            <ol class="mt-5 text-xl">
+                <li>1.
+                    Nayak, Shubhransu, et al."Rice crop loss due to major pathogens and the potential of endophytic
+                    microbes for their control and management." Journal of Applied Biology and Biotechnology 9.5 (2021):
+                    166-175.</li>
+                <li>2. https://www.un.org/development/desa/en/news/population/world-population-prospects-2019.html</li>
+                <li>3. Kyrova, Elena, Maria Egorova, and Alexander Ignatov. "Species of the genus Xanthomonas infecting
+                    cereals and oilseeds in the Russian Federation and its diagnostics." BIO Web of Conferences. Vol.
+                    18. EDP Sciences, 2020.</li>
+                <li>4. Jan, Arif Tasleem. "Outer membrane vesicles (OMVs) of gram-negative bacteria: a perspective
+                    update."
+                    Frontiers in microbiology 8 (2017): 1053.</li>
+                <li>5. Collins, Shannon M., and Angela C. Brown. "Bacterial outer membrane vesicles as antibiotic
+                    delivery vehicles." Frontiers in immunology 12 (2021): 733064.</li>
+                <li>Jinek, Martin, et al. "Structures of Cas9 endonucleases reveal RNA-mediated conformational
+                    activation." Science 343.6176 (2014): 1247997.
+                </li>
+                <li>Madeline Barron, Misciwriters, Bacterial outer membrane vesicles: Little membrane blebs with big
+                    vaccine potential https://misciwriters.com/</li>
+                <li>Mohanraju, Prarthana, et al. "Heterologous expression and purification of the CRISPR-Cas12a/Cpf1
+                    protein." Bio-protocol 8.9 (2018): e2842-e2842.
+                </li>
+                <li>Bandyopadhyay, Anindya, et al. "CRISPR-Cas12a (Cpf1): a versatile tool in the plant genome editing
+                    tool box for agricultural advancement." Frontiers in Plant Science 11 (2020): 584151.
+                </li>
+                <li>Palmer, Tracy, and Ben C. Berks. "The twin-arginine translocation (Tat) protein export pathway."
+                    Nature Reviews Microbiology 10.7 (2012): 483-496.
+                </li>
+                <li>Schwechheimer, Carmen, and Meta J. Kuehn. "Outer-membrane vesicles from Gram-negative bacteria:
+                    biogenesis and functions." Nature reviews microbiology 13.10 (2015): 605-619.
+                </li>
+                <li>Ahmed, Abeer Ahmed Qaed, et al. "Outer Membrane Vesicles (OMVs) as Biomedical Tools and Their
+                    Relevance as Immune-Modulating Agents against H. pylori Infections: Current Status and Future
+                    Prospects." International Journal of Molecular Sciences 24.10 (2023): 8542.
+                </li>
+                <li>Verma, Raj Kumar, et al. "A bacteriophytochrome mediates Interplay between light sensing and the
+                    second messenger cyclic Di-GMP to control social behavior and virulence." Cell Reports 32.13 (2020).
+                </li>
+                <li>Crispr Cas12a genome editing technique, IDT DNA
+                    https://www.idtdna.com/pages/technology/crispr/crispr-genome-editing/Alt-R-systems/crispr-cas12a
+                </li>
+                <li>Palmer, Tracy, and Phillip J. Stansfeld. "Targeting of proteins to the twin‐arginine translocation
+                    pathway." Molecular microbiology 113.5 (2020): 861-871.</li>
+            </ol>
+        </div>
     </div>
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
     <script src="./indexMaker.js"></script>
     <script>
         document.querySelector('.nav-design').addEventListener("click", () => {
