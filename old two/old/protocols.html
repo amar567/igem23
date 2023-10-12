@@ -12,15 +12,15 @@
     <script src="../katex/katex.min.js"></script>
     <script src="../katex/contrib/auto-render.min.js"></script>
     <script src="../katex/contrib/mhchem.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-        src="https://res.cloudinary.com/positionrelativ/raw/upload/v1492377595/jquery.rwdImageMaps_lq5sye.js"></script>
   </head>
   <style>
     @font-face {
-        font-family: "MongoDBValueSerifBold";
-        src: url('../fonts/MongoDBValueSerif-Bold.woff2');
+        font-family: "MongoDBValueSerif";
+        src: url('../fonts/MongoDBValueSerif-Regular.woff2');
+      }
+      @font-face {
+        font-family: "elucidCircular";
+        src: url('../fonts/EuclidCircularA-Regular-WebXL.woff2');
       }
     * {
       margin: 0;
@@ -29,8 +29,13 @@
       --light-color: #fff;
       --bright-green: #00ED64;
     }
+    body {
+      font-family: "MongoDBValueSerif", sans-serif;
+    }
+    h1, h2 {
+      font-family: "elucidCircular", sans-serif;
+    }
     .mycontainer {
-        font-family: "MongoDBValueSerifBold", sans-serif;
         background: var(--light-color);
         width: 100%;
     }
