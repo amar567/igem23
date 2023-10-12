@@ -2,7 +2,7 @@ PROJECT
     Description
     Engineering
     Contribution
-        Parts
+        Parts table here
     Awards
 
 WET LAB
@@ -22,3 +22,13 @@ TEAM
     Members
     Collaborations
     Attributions
+
+----------------------------------------------
+
+Description
+Engineering
+Contribution
+Model
+Human Practices
+Education
+Attributions
