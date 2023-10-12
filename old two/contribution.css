@@ -1,3 +1,12 @@
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--body-font);
+}
+
 .hero {
     height: 60vh;
 }
@@ -66,6 +75,11 @@
 
 .equation {}
 
+.h1-item {
+    font-family: var(--body-font);
+}
+
 .h2-item {
     padding-left: 20px;
+    font-family: var(--body-font);
 }

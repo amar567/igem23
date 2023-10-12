@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Set a class to differentiate h1 and h2 items
         listItem.classList.add(header.tagName.toLowerCase() === "h1" ? "h1-item" : "h2-item");
+        listItem.classList.add("mt-5", "text-xl")
 
         // Add an event listener to scroll to the corresponding section when clicked
         listItem.addEventListener("click", function () {
             header.scrollIntoView({ behavior: "smooth" });
         });
-        
+
         const randStr = generateRandomString(5)
         header.id += randStr
 
