@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+  </head>
+
+  <body class="p-2">
+    <nav class="relative z-50 mb-10">
+      <div
+        class="fixed hidden md:flex justify-between items-center bg-[#E3ABAB] left-2 right-2 rounded-md"
+      >
+        <div class="ml-4">LOGO</div>
+        <div class="mr-4 ml-auto relative">
+          <ul class="flex flex-row mr-10">
+            <li class="p-1 m-2 cursor-pointer relative group">Home</li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer">Project</span>
+              <ul
+                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    Description
+                  </li>
+                </a>
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    Design
+                  </li>
+                </a>
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    DBLT
+                  </li>
+                </a>
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    Contribution
+                  </li>
+                </a>
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    Engineeringn
+                  </li>
+                </a>
+                <a href="https://www.example.com">
+                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                    Implementation
+                  </li>
+                </a>
+              </ul>
+            </li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer">Wet Lab</span>
+              <ul
+                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Experiment
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Protocols
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Notebook
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Parts
+                </li>
+              </ul>
+            </li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer">Results</span>
+              <ul
+                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Wet Lab Resuts
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Proof of Concept
+                </li>
+              </ul>
+            </li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer">Human Practices</span>
+              <ul
+                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  HD
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Eucation
+                </li>
+                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                  Safety
+                </li>
+              </ul>
+            </li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer">Model</span>
+            </li>
+            <li class="p-1 m-2 relative group">
+              <span class="cursor-pointer" id="team">Team</span>
+              <ul
+              class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+              >
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">All Members</li>
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Attribution</li>
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Collaboration</li>
+            </ul>
+          </li>
+          <li class="p-1 m-2 relative group">
+            <span class="cursor-pointer">Awards</span>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile navbar -->
+
+    <div class="bg-[#E3ABAB] rounded-lg">
+      <button id="mobile-menu-button" class="md:hidden block text-2xl p-2">
+        &#9776;
+      </button>
+    </div>
+
+    <div id="navbar" class="md:hidden mb-2">
+      <ul>
+        <li class="p-1 m-2 cursor-pointer relative toggle-submenu" id="home">
+          Home
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="project">
+          <span class="cursor-pointer">Project</span>
+          <ul
+            class="hidden absolute left-0 mt-0 bg-white border rounded-lg py-1 px-2 translate-x-40 -translate-y-8 space-y-3 w-40 opacity-100 transition-all duration-300"
+            id="project-sublist"
+          >
+            <a href="https://www.example.com">
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                Description
+              </li>
+            </a>
+            <a href="https://www.example.com">
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                Design
+              </li>
+            </a>
+            <a href="https://www.example.com">
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                Engineering Success
+              </li>
+            </a>
+            <a href="https://www.example.com">
+              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+                Proposed Implementation
+              </li>
+            </a>
+          </ul>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="wetlab">
+          <span class="cursor-pointer">Wet Lab</span>
+          <ul
+            class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 translate-x-40 -translate-y-8 space-y-3 w-40 opacity-100 transition-all duration-300"
+            id="wetlab-sublist"
+          >
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Experiment
+            </li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Protocols
+            </li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Notebook
+            </li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Parts
+            </li>
+          </ul>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="results">
+          <span class="cursor-pointer">Results</span>
+          <ul
+            class="hidden absolute left-0 mt-4 bg-white border translate-x-40 -translate-y-8 rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+            id="results-sublist"
+          >
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Wet Lab Reults</li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Proof of Concept
+            </li>
+          </ul>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="humanpractices">
+          <span class="cursor-pointer">Human Practices</span>
+          <ul
+            class="hidden absolute left-0 mt-4 bg-white border translate-x-40 -translate-y-8 rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+            id="humanpractices-sublist"
+          >
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Integrated Human Practices</li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Eucation
+            </li>
+            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
+              Safety
+            </li>
+          </ul>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="drylab">
+          <span class="cursor-pointer">Model</span>
+        </li>
+        <li class="p-1 m-2 relative toggle-submenu" id="team">
+          <span class="cursor-pointer" >Team</span>
+          <ul
+            class="hidden absolute left-0 mt-0 bg-white translate-x-40 -translate-y-6 border rounded-lg py-0 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
+            id="team-sublist"
+          >
+            <li class="cursor-pointer toggle-submenu" id="model">All Members</li>
+            <li class="cursor-pointer toggle-submenu" id="model">Attribution</li>
+            <li class="cursor-pointer toggle-submenu" id="model">Collaboration</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const dropdownItems = document.querySelectorAll(".group");
+      let openSubmenu = null; // Track the currently open submenu
+
+      // Close the dropdown menu when clicking anywhere outside
+      document.addEventListener("click", (event) => {
+        if (openSubmenu && !event.target.closest(".group")) {
+          openSubmenu.classList.add("hidden");
+          openSubmenu = null;
+        }
+      });
+
+      dropdownItems.forEach((item) => {
+        item.addEventListener("click", (event) => {
+          const submenu = item.querySelector("ul");
+          const isSubitem = event.target.closest("ul") === submenu;
+
+          // Close the previously open submenu (if any) when clicking on a different item
+          if (!isSubitem && openSubmenu && openSubmenu !== submenu) {
+            openSubmenu.classList.add("hidden");
+          }
+
+          if (!isSubitem) {
+            submenu.classList.toggle("hidden");
+            openSubmenu = submenu;
+          }
+
+          event.stopPropagation(); // Prevent this click from propagating to the document
+        });
+      });
+
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const navbar = document.getElementById("navbar");
+
+      mobileMenuButton.addEventListener("click", () => {
+        navbar.classList.toggle("hidden");
+      });
+
+      const toggleSubmenuItems = document.querySelectorAll(".toggle-submenu");
+      let openSubmenu2 = null; // Track the currently open submenu
+
+      toggleSubmenuItems.forEach((item) => {
+        // Get the ID of the list item
+        const itemId = item.getAttribute("id");
+
+        // Get the corresponding sublist using the ID
+        const sublist = document.getElementById(`${itemId}-sublist`);
+
+        const spanElement = item.querySelector("span");
+
+        // Add a click event listener to the list item
+        item.addEventListener("click", () => {
+          if (openSubmenu2 && openSubmenu2 !== sublist) {
+            // Close the previously open submenu
+            openSubmenu2.classList.add("hidden");
+            // Reset the underline animation for the previously open item
+            openSubmenu2.parentElement.classList.remove("active");
+          }
+
+          // Toggle the visibility of the clicked sublist
+          sublist.classList.toggle("hidden");
+
+          // Update the currently open submenu
+          openSubmenu2 = sublist;
+
+          // Apply the Tailwind CSS classes for the underline animation to the clicked item
+          spanElement.classList.add(
+            "border-b-2",
+            "border-transparent",
+            "hover:border-red-500",
+            "transition",
+            "duration-700",
+            "w-auto"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

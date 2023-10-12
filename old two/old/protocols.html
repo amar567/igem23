@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment</title>
+    <script src="./tailwind.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../description.css">
+    <link rel="stylesheet" href="../katex/katex.min.css">
+
+    <script src="../katex/katex.min.js"></script>
+    <script src="../katex/contrib/auto-render.min.js"></script>
+    <script src="../katex/contrib/mhchem.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+        src="https://res.cloudinary.com/positionrelativ/raw/upload/v1492377595/jquery.rwdImageMaps_lq5sye.js"></script>
+  </head>
+  <style>
+    @font-face {
+        font-family: "MongoDBValueSerifBold";
+        src: url('../fonts/MongoDBValueSerif-Bold.woff2');
+      }
+    * {
+      margin: 0;
+      padding: 0;
+      --dark-color: #001E2B;
+      --light-color: #fff;
+      --bright-green: #00ED64;
+    }
+    .mycontainer {
+        font-family: "MongoDBValueSerifBold", sans-serif;
+        background: var(--dark-color);
+        width: 100%;
+    }
+    .hero {
+        width: 100%;
+        height: 75vh;
+        border-radius: 10px;
+        background: var(--dark-color);
+        color: var(--light-color);
+    }
+    .overview {
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        border-radius: 10px;
+    }
+    .overview-box {
+        width: 25%;
+        height: 200px;
+        background-color: var(--dark-color);
+        color: var(--light-color);
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .collapsable-boxes .box {
+        background-color: var(--dark-color);
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .drop-down {
+      background-color: #e6e6e6;
+      overflow: hidden;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .drop-down .drop-down-content {
+      padding-bottom: 5rem;
+    }
+  </style>
+  <body>
+    <div class="mycontainer py-3 px-5">
+      <div class="hero flex flex-col justify-center items-center">
+        <h1 class="text-8xl mb-10">Protocols</h1>
+        <p class="text-3xl">All the protocols</p>
+      </div>
+      <div class="overview mt-5 py-5">
+        <h1 class="text-5xl text-center mb-10">OVERVIEW</h1>
+        <div class="overview-boxes flex justify-around">
+          <div
+            class="overview-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h2>Materials</h2>
+          </div>
+          <div
+            class="overview-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h2>Stock Solution Preparation</h2>
+          </div>
+          <div
+            class="overview-box flex flex-col justify-center items-center text-3xl text-white"
+          >
+            <h2>Protocols</h2>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 flex relative">
+        <div class="w-full pb-10 bg-white rounded-[10px]">
+          <h1 class="text-5xl mx-10 my-5">Materials</h1>
+          <div class="collapsable-boxes flex flex-col">
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                <div
+                  class="flex flex-col items-center w-full border p-5 m-5 bg-slate-100 rounded-md shadow-2xl"
+                >
+                  <div class="flex flex-col sm:w-2/3">
+                    <div>
+                      <h2
+                        class="h2 text-accent text-xl font-semibold mb-3 uppercase"
+                      >
+                        Section
+                      </h2>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere impedit cumque fuga doloremque quidem voluptates
+                      fugiat odit, debitis expedita eum quis ut blanditiis
+                      minima pariatur nulla nesciunt. Impedit, esse laboriosam!
+                      <br />
+                      <br />
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Non dolorem tempore porro delectus libero. Qui omnis quis,
+                      voluptates pariatur voluptas doloribus est ipsa quae.
+                      Corporis quam accusantium quia maxime earum!
+                    </p>
+                  </div>
+                  <div
+                    class="flex scale-75 bg-current ml-0 sm:ml-1 mt-1 sm:mt-0 rounded-md max-h-[60vh]"
+                  >
+                    <img
+                      src="https://source.unsplash.com/random/880x600?apple"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-row-reverse relative">
+        <div class="w-full pb-10 bg-white rounded-[10px]">
+          <h1 class="text-5xl mx-10 my-5">Stock Solution Preparation</h1>
+          <div class="collapsable-boxes flex flex-col">
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Plasmids</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex relative">
+        <div class="w-full pb-10 bg-white rounded-[10px]">
+          <h1 class="text-5xl mx-10 my-5">Protocols</h1>
+          <div class="collapsable-boxes flex flex-col">
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Experiment 1</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Experiment 2</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Experiment 3</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+            <div class="box w-100 mx-10 mt-10 mb-0">
+              <h1 class="text-2xl m-10 text-white">Experiment 4</h1>
+            </div>
+            <div class="drop-down mx-10 hidden">
+              <div class="drop-down-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                a praesentium nobis libero unde eos facilis accusantium,
+                necessitatibus in reprehenderit magnam explicabo consequuntur.
+                Veniam porro perspiciatis officia cum suscipit eaque?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const boxes = document.querySelectorAll(".box");
+      boxes.forEach((box) => {
+        box.addEventListener("click", () => {
+          box.nextElementSibling.classList.toggle("hidden");
+          boxes.forEach((otherBox) => {
+            if (otherBox !== box)
+              otherBox.nextElementSibling.classList.add("hidden");
+          });
+          box.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+      const overviewBoxes = document.querySelectorAll(".overview-box");
+      overviewBoxes.forEach((box, index) => {
+        box.addEventListener("click", () => {
+          const phase = document.querySelector(`.phase-${index + 1}`);
+          phase.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IISER Kolkata | Description</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./experiment2.css">
+    <link rel="stylesheet" href="./katex/katex.min.css">
+    <link rel="stylesheet" href="./grassAnimation.css">
+    <link rel="stylesheet" href="./hamburger.css">
+
+
+    <script src="./katex/katex.min.js"></script>
+    <script src="./katex/contrib/auto-render.min.js"></script>
+    <script src="./katex/contrib/mhchem.min.js"></script>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <script src='./js/sketch.min.js'></script>
+
+</head>
+
+<body>
+
+    <div class="" id="behind" style="background-color: #001E2B;">
+        <div style="position: absolute;top: 0;left: 0;width: 100vw;height: 100vh;background-size: cover;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+            <!-- <h1 class="h1_content" style="color: #97ddfd;font-family: MongoDBValueSerif ;font-size: 8rem;text-align: center;">
+                IGEM 2023
+            </h1> -->
+            <div style="width: 100%;width: 100%;height: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                <img src="./images/iGif c.gif" style="height: 90%;transform: translate(0,-10%);" alt="">
+            </div>
+            <!-- <div class="sun"></div> -->
+        </div>
+        <canvas id="test"></canvas>
+    </div>
+
+    <br><br>
+
+    <div>
+        <div>XOO CULTURE SYSTEM</div>
+        <div>OMV Isolation and Purification</div>
+        <div>TAT genetic circuit </div>
+        <div>Machine Learning Model for Mutational Response</div>
+    </div>
+
+
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
+
+    <script src="./main.js"></script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true }
+            ]
+        });
+    </script>
+    <script src="./table.js"></script>
+    <script>
+        // Sample CSV data (you can replace this with your CSV file)
+        const csvData = `Name,URL,Description
+                        John,http://example.com/john,Software Engineer
+                        Alice,http://example.com/alice,Web Developer
+                        Bob,http://example.com/bob,Data Analyst`;
+
+        renderTable(csvData, 'csvTableContainer')
+
+        // let csvData2 = 
+    </script>
+    <script>
+        // $(document).ready(function (e) {
+        //     $('rect').on('focus', function (e) {
+        //         e.preventDefault();
+        //         alert($(this).attr('id'))
+        //         // $('.selection p').html($(this).attr('class'));
+        //     });
+
+        // });
+
+    </script>
+    <!-- <script src="./indexMaker.js"></script> -->
+    <script src="./grassAnimation copy.js"></script>
+</body>
+
+</html>
