@@ -14,23 +14,6 @@
     <script src="./katex/contrib/auto-render.min.js"></script>
     <script src="./katex/contrib/mhchem.min.js"></script>
     <script src="./tailwind.js"></script>
-    <style>
-        @font-face {
-            font-family: "MongoDBValueSerifBold";
-            src: url('./fonts/MongoDBValueSerif-Bold.woff2');
-        }
-
-        @font-face {
-            font-family: "euclidCircular";
-            src: url("./fonts/EuclidCircularA-Regular-WebXL.woff2") format('woff');
-        }
-
-        :root {
-            --dark-color: #001E2B;
-            --light-color: #fff;
-            --bright-green: #00ED64;
-        }
-    </style>
 </head>
 
 <body>
@@ -40,49 +23,57 @@
             <h1 class="title text-center mt-20 mb-5 text-8xl">Project Description</h1>
             <p class="subtitle text-center mb-10 text-3xl">A brief idea about how we approached our project</p>
             <div class="flex justify-between w-1/2 mb-12 navigation_cards" style="color: var(--light-color);">
-                <div class="nav-design nav-card w-1/5 aspect-square flex items-center justify-center hover:cursor-pointer"
+                <div class="nav-design nav-card w-[23%] aspect-square flex items-center justify-center hover:cursor-pointer"
                     style="background: var(--dark-color);">
-                    <p class="text-3xl">Design</p>
+                    <p class="text-3xl">Background</p>
                 </div>
-                <div class="nav-build w-1/5 nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
+                <div class="nav-build w-[23%] nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
                     style="background: var(--dark-color);">
-                    <p class="text-3xl">Build</p>
+                    <p class="text-3xl">Inspiration</p>
                 </div>
-                <div class=" nav-test w-1/5 nav-card aspect-square flex items-center justify-center
+                <div class=" nav-test w-[23%] nav-card aspect-square flex items-center justify-center
                         hover:cursor-pointer" style="background: var(--dark-color);">
-                    <p class="text-3xl">Test</p>
+                    <p class="text-3xl">Problem</p>
                 </div>
-                <div class="nav-learn w-1/5 nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
+                <div class="nav-learn w-[23%] nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
                     style="background: var(--dark-color);">
-                    <p class="text-3xl">Learn</p>
+                    <p class="text-3xl">Solution</p>
                 </div>
             </div>
             <div>
                 <div
                     class="flex flex-col sm:flex-row w-full border py-10 px-5 my-5 bg-slate-100 rounded-md shadow-2xl bg-white">
-                    <div class="flex flex-col sm:w-2/3">
+                    <div class="flex flex-col sm:w-2/3 pr-10 ">
                         <div>
-                            <h2 class="h2 text-accent text-3xl font-semibold mb-3 uppercase">Overview</h2>
+                            <h2 class="h2 text-accent text-3xl font-semibold mb-10 uppercase">Background</h2>
                         </div>
-                        <p class="text-2xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                            impedit cumque fuga doloremque quidem voluptates fugiat odit,
-                            debitis expedita eum quis ut blanditiis minima pariatur nulla
-                            nesciunt. Impedit, esse laboriosam!
+                        <p class="text-2xl leading-10">
+                            In India, agriculture is of utmost importance for several compelling reasons. Economically,
+                            it stands as a formidable pillar, engaging over half of India's workforce and contributing a
+                            substantial 20% to the nation's GDP, showcasing its pivotal role in powering its economic
+                            engine. This year, our team wanted to focus on the importance of Rice Agriculture in India.
+                            Rice (Oryza sativa L.), which provides 20% of all calories ingested, is the primary diet for
+                            nearly half of the world's population. In 2000, there were 600 million tonnes of rice
+                            produced worldwide; by 2030, with a 1.5-fold growth, there may be 904 million tonnes
+                            produced (1).
+
                             <br />
                             <br />
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-                            dolorem tempore porro delectus libero. Qui omnis quis, voluptates
-                            pariatur voluptas doloribus est ipsa quae. Corporis quam accusantium
-                            quia maxime earum!
+                            Asia is the region where most of the world's rice is produced and farmed. The goal of
+                            increasing production while reducing losses seems extremely compelling given the projected
+                            34% rise in global population to 9.3 billion people by 2050 (2), as well as the known threat
+                            of increased pathogen and pest introductions due to various factors like increased human
+                            mobility, global trade, and climate change. Therefore, it is essential that any future crop
+                            management measures properly consider the danger posed by both existing and emerging crop
+                            diseases and pests.
+
                         </p>
                         <br>
                         <br>
                     </div>
                     <div class="flex-col ml-0 sm:ml-1 sm:mt-0 border-2 border-slate-300 p-5">
-                        <img src="https://source.unsplash.com/random/880x600?apple" alt="Image" />
-                        <p class="text-2xl font-bold mt-5">Sed ut perspiciatis unde omnis</p>
-                        <p class="text-xl">Keep a friendly rice image something like that or farmer working</p>
+                        <img src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-2.png"
+                            alt="Image" />
                     </div>
                 </div>
             </div>
@@ -97,34 +88,59 @@
                 </div>
                 <div class="content_container">
                     <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">Parts registry</h1>
-                        <p class="p_content mt-5 text-2xl">Contribution of all the parts that we have designed in a
-                            table
-                            box and
-                            importance about the parts a brief paragraph</p>
-                        <img class="w-1/2 rounded-xl mt-10" src="https://source.unsplash.com/random/880x600?apple"
-                            alt="">
-                        <p class="text-xl mt-5"><i>Image caption</i></p>
+                        <h1 class="h1_content text-3xl font-semibold">Inspiration</h1>
+                        <p class="p_content mt-5 text-2xl">In the realm of agriculture, synthetic biology offers
+                            exciting possibilities, especially when focusing on vital crops like rice. In our
+                            brainstorming phase, we had the privilege of attending a talk by Dr. Kutubuddin A Molla, an
+                            expert in genome engineering using CRISPR-Cas systems for rice plants. His talk sparked our
+                            interest in exploring CRISPR technology and its application to tackle various diseases
+                            affecting rice plants. Given our proximity to rice farming communities, we took the
+                            initiative to engage with local rice farmers and understand the challenges they face. We
+                            discovered alarming issues like pesticide misuse and the adverse effects of chemical
+                            pesticides on rice crops. Many of our team members have family members involved in farming,
+                            which deepened our understanding of the problems at hand. Through these conversations, we
+                            identified a concerning issue - bacterial blight, caused by the Xanthomonas oryzae pv oryzae
+                            bacteria, posing a significant threat to rice cultivation.</p>
                     </div>
                     <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">Parts registry</h1>
-                        <p class="p_content mt-5 text-2xl">Contribution of all the parts that we have designed in a
-                            table
-                            box and
-                            importance about the parts a brief paragraph</p>
-                        <img class="w-1/2 rounded-xl mt-10" src="https://source.unsplash.com/random/880x600?apple"
-                            alt="">
-                        <p class="text-xl mt-5"><i>Image caption</i></p>
+                        <h1 class="h1_content text-3xl font-semibold">The Problem - <em>Xanthomonas Oryzae</em></h1>
+                        <p class="p_content mt-5 text-2xl">Infections caused by Xanthomonas species, particularly
+                            Xanthomonas oryzae pv oryzae, pose a significant problem in agriculture, specifically in
+                            rice farming. This bacterium is responsible for bacterial blight, a devastating disease
+                            affecting rice plants. Bacterial blight manifests as water-soaked lesions on leaves,
+                            eventually leading to wilting, browning, and death of the plant's tissue. The disease
+                            disrupts photosynthesis and nutrient transportation, severely impacting crop yield and
+                            quality. In Southeast Asian countries, yield losses are expected to range from 10%–20% in
+                            middling conditions to up to 50% in favorable conditions. The earlier the disease manifests
+                            itself, the greater the yield loss.</p>
+                        <img class="w-1/2 rounded-xl mt-10"
+                            src="https://static.igem.wiki/teams/4781/wiki/aniket-description-diagram-1.png" alt="">
+                        <p class="p_content mt-5 text-2xl">There are about 27 different plant species that are affected
+                            by Xanthomonas infections. These
+                            species display high levels of genetic diversity, damaging up to 400 different plant species
+                            (3). Hence, during our design, we had in mind to design our bio-control agent not just
+                            limited to Xanthomonas oryzae, but also to target it against other virulence factors across
+                            the conserved species.
+                            One of the well-known interesting facts is the bacteriophytochrome-mediated mechanism used
+                            by the <i>Xanthomonas</i> infection method. It is hypothesised that day-night variations
+                            play a crucial role in <i>Xanthomonas</i> infections. If these changes are altered due to
+                            climate change there can be a significant rise in the infections taking place.(13)
+
+                            We wanted to help our farmers in Agricultural field by doing something that would reduce
+                            bacterial blight infections and in turn reduce losses they suffer due to it.
+                            This motivated us to create our novel solution:
+                        </p>
                     </div>
                     <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
-                        <h1 class="h1_content text-3xl font-semibold">Parts registry</h1>
-                        <p class="p_content mt-5 text-2xl">Contribution of all the parts that we have designed in a
-                            table
-                            box and
-                            importance about the parts a brief paragraph</p>
-                        <img class="w-1/2 rounded-xl mt-10" src="https://source.unsplash.com/random/880x600?apple"
-                            alt="">
-                        <p class="text-xl mt-5"><i>Image caption</i></p>
+                        <h1 class="h1_content text-3xl font-semibold">Xanthacinator</h1>
+                        <p class="p_content mt-5 text-2xl">Xanthacinator is a two fold solution against Bacterial
+                            Blight. Xanthacinator has been designed around the feedback from stakeholders of the
+                            agriculture industry to make it user friendly. It involves a Detection kit and a novel
+                            Biocontrol Agent.</p>
+                        <h2 class="h2_content uppercase text-2xl font-semibold mt-10">Detection:</h2>
+                        <div>
+                            <p></p>
+                        </div>
                     </div>
                     <div class="content_section py-5" style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius:10px">
                         <h1 class="h1_content text-3xl font-semibold">Parts registry</h1>
