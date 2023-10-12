@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IISER Kolkata | Project Description</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./description2.css">
+    <link rel="stylesheet" href="./katex/katex.min.css">
+
+    <script src="./katex/katex.min.js"></script>
+    <script src="./katex/contrib/auto-render.min.js"></script>
+    <script src="./katex/contrib/mhchem.min.js"></script>
+    <script src="./tailwind.js"></script>
+    <style>
+        @font-face {
+            font-family: "MongoDBValueSerifBold";
+            src: url('./fonts/MongoDBValueSerif-Bold.woff2');
+        }
+
+        @font-face {
+            font-family: "euclidCircular";
+            src: url("./fonts/EuclidCircularA-Regular-WebXL.woff2") format('woff');
+        }
+
+        :root {
+            --dark-color: #001E2B;
+            --light-color: #fff;
+            --bright-green: #00ED64;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container flex flex-col pt-10 px-20 w-full pb-20">
+        <div class="hero flex flex-col items-center mb-10">
+            <!-- navbar -->
+            <h1 class="title text-center mt-20 mb-5 text-8xl">Project Description</h1>
+            <p class="subtitle text-center mb-10 text-3xl">A brief idea about how we approached our project</p>
+            <div class="flex justify-between w-1/2 mb-12 navigation_cards" style="color: var(--light-color);">
+                <div class="nav-design nav-card w-1/5 aspect-square flex items-center justify-center hover:cursor-pointer"
+                    style="background: var(--dark-color);">
+                    <p class="text-3xl">Design</p>
+                </div>
+                <div class="nav-build w-1/5 nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
+                    style="background: var(--dark-color);">
+                    <p class="text-3xl">Build</p>
+                </div>
+                <div class=" nav-test w-1/5 nav-card aspect-square flex items-center justify-center
+                        hover:cursor-pointer" style="background: var(--dark-color);">
+                    <p class="text-3xl">Test</p>
+                </div>
+                <div class="nav-learn w-1/5 nav-card aspect-square flex items-center justify-center hover:cursor-pointer"
+                    style="background: var(--dark-color);">
+                    <p class="text-3xl">Learn</p>
+                </div>
+            </div>
+            <div class="pdfs_section mt-10">
+                <div class="sticky_index_container">
+                    <div class="sticky_index">
+                        <h1>
+                            Contents
+                        </h1>
+                    </div>
+                </div>
+                <div class="content_container">
+                    <div class="content_section py-5">
+                        <h1 class="h1_content text-3xl">Parts registry</h1>
+                        <h2 class="h2_content text-xl mt-5">This is an example subheading in the section</h2>
+                        <p class="p_content mt-5">Contribution of all the parts that we have designed in a table box and
+                            importance about the parts a brief paragraph</p>
+                        <h2 class="h2_content text-xl mt-10 mb-5">Parts table</h2>
+                        <img class="w-100%" src="https://source.unsplash.com/random/880x600?apple" alt="">
+                    </div>
+                    <div class="content_section py-5">
+                        <h1 class="h1_content text-3xl">Hands on in silico Gibson guidebook </h1>
+                        <h2 class="h2_content text-xl mt-5">This is an example subheading in the section</h2>
+                        <p class="p_content my-5">As a part of our education outreach abuot synthetic biology with the
+                            help
+                            of our sponsors we created a 2 hour course module on in silico synthetic biology.
+                            <br>
+                            We took this up initiative in the MD simulation work. Attach PDF of the guidebook below
+                        </p>
+                        <img class="w-100%" src="https://source.unsplash.com/random/880x600?apple" alt="">
+                        <a class="a_content" href="">View full pdf</a>
+                    </div>
+                    <div class="content_section py-5">
+                        <h1 class="h1_content text-3xl">CRISPR Cas 12a Guidebook </h1>
+                        <h2 class="h2_content text-xl mt-5">This is an example subheading in the section</h2>
+                        <p class="p_content my-5">As a part of our education outreach abuot synthetic biology with the
+                            help
+                            of our sponsors we created a 2 hour course module on in silico synthetic biology.<br>
+                            We took this up initiative in the MD simulation work. Attach PDF of the guidebook below</p>
+                        <img class="w-100%" src="https://source.unsplash.com/random/880x600?apple" alt="">
+                        <a class="a_content" href="">View full pdf</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./indexMaker.js"></script>
+    <script>
+        document.querySelector('.nav-design').addEventListener("click", () => {
+            document.querySelector('#design').scrollIntoView({ behavior: 'smooth' })
+        })
+        document.querySelector('.nav-build').addEventListener("click", () => {
+            document.querySelector('#build').scrollIntoView({ behavior: 'smooth' })
+        })
+        document.querySelector('.nav-test').addEventListener("click", () => {
+            document.querySelector('#test').scrollIntoView({ behavior: 'smooth' })
+        })
+        document.querySelector('.nav-learn').addEventListener("click", () => {
+            document.querySelector('#learn').scrollIntoView({ behavior: 'smooth' })
+        })
+    </script>
+</body>
+
+</html>
