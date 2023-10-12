@@ -1,0 +1,16 @@
+,,
+,,
+Strain,Description,Source
+E.coli DH5α,Used for plasmid amplification,Prof Supratim Datta’s Lab. IISER Kolkata
+E.coli Top10F,Used for plasmid amplification,Dr Arnab Gupta’s Lab. IISER Kolkata
+E.coli 10β,Used for plasmid amplification,From NEB transformation kit
+E.coli BL21(de3),Specialized for greater protein expression,Prof Supratim Datta’s Lab. IISER Kolkata
+E.coli C41(de3),Specialized for greater protein expression,Prof Supratim Datta’s Lab. IISER Kolkata
+Xanthomonas oryzae pv. Oryzae BXO1,Wild type Xoo,Dr Subhadeep Chatterjee’s Lab. CDFD Hyderabad
+Xanthomonas oryzae pv. Oryzae BXO43,Rifampicin resistant mutant of wild type Xoo,Dr HK Patel. CCMB
+E.coli K12 TolA,K12 strain with gene knockout ΔtolR::Kan,Dr. Dipak Dutta’s lab. CSIR-IMTech
+E.coli K12 TolR,K12 strain with gene knockout ΔtolA::Kan,Dr. Dipak Dutta’s lab. CSIR-IMTech
+E.coli K12 DegP,K12 strain with gene knockout Δnlp1::Kan,Dr. Dipak Dutta’s lab. CSIR-IMTech
+E.coli K12 NlpI,K12 strain with gene knockout ΔdegP::Kan,Dr. Dipak Dutta’s lab. CSIR-IMTech
+E.coli JC8031 ΔTolRA,JC8031 strain with ΔTolA and ΔTolR genes double knockout,"Dr. Laetitia Houot’s lab. Laboratoire d'Ingénierie des Systèmes Macromoléculaires
+ CNRS - Aix-Marseille Université. France"

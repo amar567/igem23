@@ -1,0 +1,33 @@
+,,
+,,
+Primers,Description,Sequence(5’-3’)
+Det_1 FP,Forward primer for Det_1,TGCTGCAGTAATACGACTCACTATAGG
+Det_1 RP,Reverse primer for Det_1,AGGCATGTGCAGG
+Det_2 FP,Forward primer for Det_2,GACGCCGTTATTGTCGAC
+Det_2 RP,Reverse primer for Det_2,CGCCTCAAGTGGAATC
+Det_3 FP,Forward primer for Det_3,TTGGTAGGTGAAGCGATT
+Det_3 RP,Reverse primer for Det_3,ATGGAATTCtttcttttgggtatagcg
+pSB1C3_det_FP,Forward primer for making pSB1C3 Gibson compatible with Detection insert,CCTTCTTTCCTATAGTGAGTCGTATTAGAATTCCAGAAATCATCCTTAG
+PSB1C3_det_RP,Reverse primer for making pSB1C3 Gibson compatible with Detection insert,gactgtccacgacgctatacccaaaagaaaCTGCAGTCCGGCAAAAA
+Tat1 FP,Forward primer for Tat_1,ATGCTGCAGTAATACGACTCACTATAGGatta
+Tat1 RP,Reverse primer for Tat_1,ATCATTGTAGAGCCTTGTG
+Tat 2 FP,Forward primer for Tat_2,AAACAACTTCCACAAGG
+Tat 2 RP,Reverse primer for Tat_2,atgGAATTCtataaacgcagaaaggccca
+pSB1C3_Tat_FP,Forward primer for making pSB1C3 Gibson compatible with Tat insert,tctttaatCCTATAGTGAGTCGTATTAGAATTCCAGAAATCATCCTTAG
+pSB1C3_Tat_RP,Reverse primer for making pSB1C3 Gibson compatible with Tat insert,caccttcgggtgggcctttctgcgtttataCTGCAGTCCGGCAAAAA
+F2_pBad_Xoo FP,Forward primer for F2_pBad_Xoo,GGC GGA TGA GAG AAG ATG TCC ATC TAC C
+F2_pBad Xoo RP,Reverse primer for F2_pBad_Xoo,CGT CCT TGA TGA AGA GGA TGG CGG
+F4_pTet Xoo FP,Forward primer for F4_pTet_Xoo,ATA ACA CCG CCA TCC TCT TCA TCA AGG
+F4_pTet Xoo RP,Reverse primer for F4_pTet_Xoo,TGCCTGCAGGTCGACTTAGTTAGTGG
+crRNA_1_Xoo FP,Forward primer for crRNA array,ACC ACC ACT AAC TAA GTC GAC CTG
+crRNA_1_Xoo RP,Reverse primer for crRNA array,GACCATGATTACGCCgga
+pHM1_pBad FP,Forward primer for first fragment of pHM1,taaaaaaaattttccGGCGTAATCATGGTCATAG
+Frag1_pHM1_RP,Reverse primer for first fragment of pHM1,CTCACAGCCAAACTATCAGGTCAAGTCTGC
+Frag2_pHM1_FP,Forward primer for second fragment of pHM1,GCAGACTTGACCTGATAGTTTGGCTGTGAGCAATTATGTGC
+pHM1_pBad_RP,Reverse primer for second fragment of pHM1,ACAGGCACATTATGCACTGGCCGTCGTTTTACA
+F1-spTorA-FnCas12a-FP,Forward primer for SpTorA-FnCas12a fragmet 1,CAG GAG GAA TTC ACC ATG GCG
+F1-spTorA-FnCas12a-RP,Reverse primer for SpTorA-FnCas12a fragmet 1,AGT ATT TTG CTT TTT CAG TTT TTT TGG CTA TTA ATT CTT GC
+F2-spTorA-FnCas12a FP,Forward primer for SpTorA-FnCas12a fragmet 2,TAG CCA AAA AAA CTG AAA AAG CAA AAT ACT TAT CTC TAG
+F2-spTorA-FnCas12a RP,Reverse primer for SpTorA-FnCas12a fragmet 2,CTT GCA TGC CTG CAG TTA GTG GTG
+pBad-spTorA-GFP-6xHis FP,Forward primer for linearizing PBAD24,GTT ATT GTT CGC CAT GGT GAA TTC CTC CTG CTA GCC C
+pBad-spTorA-GFP-6xHis RP,Reverse primer for linearizing PBAD24,CAT CAT CAC CAC TAA CTG CAG GCA TGC AAG CTT GG
