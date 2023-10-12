@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IISER Kolkata | Description</title>
+
+    <link rel="stylesheet" href="../../old two/main.css">
+    <link rel="stylesheet" href="../../old two/description.css">
+    <link rel="stylesheet" href="../../old two/katex/katex.min.css">
+    <link rel="stylesheet" href="../../old two/grassAnimation.css">
+    <link rel="stylesheet" href="../../old two/hamburger.css">
+
+    <script src="../../old two/katex/katex.min.js"></script>
+    <script src="../../old two/katex/contrib/auto-render.min.js"></script>
+    <script src="../../old two/katex/contrib/mhchem.min.js"></script>
+
+    <script src="../../old two/js/jquery.min.js"></script>
+    <script src="../../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <script src='../../old two/js/sketch.min.js'></script>
+
+</head>
+
+<body>
+
+
+    <header class="nav_Container" id="nav_Container">
+        <nav class="menu--right" role="navigation">
+            <div class="menuToggle">
+                <input type="checkbox" onclick="hide()" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="menuItem">
+                    <ul class="clear_ul">
+                        <li><a href="#">PROJECT</a></li>
+                        <li><a href="#">WET LAB</a></li>
+                        <li><a href="#">DRY LAB</a></li>
+                        <li><a href="#">HUMAN PRACTICES</a></li>
+                        <li><a href="#">TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown hidden" id="dropdown">
+            <ul class="clear_ul" id="dropDown_ul">
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="" id="behind">
+        <h1 class="pgintro">
+            ENGINEERING
+        </h1>
+        <canvas id="test"></canvas>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <h1 class="h1_content">Biofilm Modeling</h1>
+
+    <div class="detailed_description_section">
+        <div class="sticky_index_container">
+            <div class="sticky_index">
+                <h1 class="h1Index">
+                    Contents
+                </h1>
+            </div>
+        </div>
+        <div class="content_container">
+            <div class="content_section" style="margin-top: 0;">
+                <h1 class="h1_content">OVERVIEW</h1>
+                <p class="p_content">
+                    Xanthomonas, when cultured in the media, follow a particular pattern while growing. The growth of
+                    the bacteria obeys a particular type of diffusion equation, called reaction-diffusion equations.
+                </p>
+                <h1 class="h1_content">OBJECTIVE</h1>
+                <p class="p_content">
+                    Our objective is to simulate the bacterial biofilm given by the experiment and to extract an
+                    effective rate of population decay of bacteria in culture medium when the biocontrol agent is added.
+                    We can use this decay rate in the population model to see how the infection is controlled when the
+                    agent is used in real field.
+                </p>
+                <h1 class="h1_content">PARAMETERS</h1>
+                <ul class="p_content">
+                    <li>
+                        Bacterial diffusion constant \((D_b)\)
+                    </li>
+                    <li>
+                        Nutritional diffusion constant \((D_h)\)
+                    </li>
+                    <li>
+                        Carrying capacity of bacterial population \((b_0)\)
+                    </li>
+                </ul>
+
+                <h1 class="h1_content">MODEL</h1>
+                <p class="p_content">
+                    The bacterial growth follows the coupled reaction diffusion equation given below:
+                </p>
+                <p class="p_content">
+                    Where $b$ is the bacterial concentration and \(h\) is the nutrition concentration and \(f(b,h)\) is the reaction term.                </p>
+                    <div class="equation_container">
+                        <span class="equation">
+                            $$
+                            \begin{align}
+                            \frac{\partial b}{\partial t}&= D_b\Delta^2 b + f(b,h)\\
+                            \frac{\partial h}{\partial t}&= D_h\Delta^2 h - f(b,h)
+                            \end{align}
+                            $$
+                        </span>
+                    </div>
+                    <p class="p_content">
+                        We took a \(101\times 101\) hexagonal grid and used the finite difference method to solve the coupled reaction-diffusion. The reaction term is taken to be – \(f(b,h)= h\left(1-e^{b/b_0}\right)\).
+                    </p>
+                    <p class="p_content">
+                        Where \(b_0\) is the carrying capacity of the bacterial population. The population goes to 0 if bacterial concentration becomes much larger than \(b_0\).                    </p>
+                        
+                <h1 class="h1_content">RESULTS AND PLOTS</h1>
+                <p class="p_content">
+                    The bacteria was grown in agar media in a petri dish in the lab and was observed in a day-basis manner. After 7 days, we got the pattern shown below:
+                </p>
+                <img class="image_content" src="https://static.igem.wiki/teams/4781/wiki/website-images/model/biofilm-sample.jpeg"
+                    alt="">
+                    <p style="text-align: center;">
+                        Fig 1: Bacterial growth pattern in petri dish
+                    </p>
+                    <p class="p_content">
+                        We set the parameters as following –
+                    </p>
+                    <img class="image_content" src="https://static.igem.wiki/teams/4781/wiki/website-images/model/biofilm-table.png"
+                    alt="">
+                    <img class="image_content" src="https://static.igem.wiki/teams/4781/wiki/website-images/model/biofilm.gif"
+                    alt="">
+                    <p style="text-align: center;">
+                        Fig 2: Bacterial growth pattern simulated numerically.
+                    </p>
+                    
+                    <p class="p_content">
+                        The simulation is made up of 8 timestamps. Each time gap represents a day passed. We have plotted the bacterial concentration v/s time for each of the timestamp as shown in the graph below. We also want to calculate an effective rate of bacterial growth after the bacteria overcomes the lag phase which can be used in the population dynamics simulations. For that, we have plotted the bacterial concentration v/s time for each of the timestamps (Figure 3). 
+                    </p>
+                    
+                    <img class="image_content" src="https://static.igem.wiki/teams/4781/wiki/website-images/model/baccont.png"
+                    alt="">
+                    <p style="text-align: center;">
+                        Fig 3: Bacterial concentration plotted with time.
+                    </p>
+                    <p class="p_content">
+                        In the graph, the lag phase can be seen clearly. The bacterial growth rate is = (concentration at t=70 - concentration at t=20)/(70-20). The effective rate is 0.01044/Day. 
+
+                        The code can be found <a href="https://drive.google.com/file/d/1pRkp0u30hRUk_S433yp-BcDA1Ld_GWox/view?usp=drive_link">here.</a></p>
+
+
+                <h1 class="h1_content">CONCLUSION</h1>
+                <ul class="p_content">
+                    <li>We could almost match the experimental pattern with the numerically simulated pattern.</li>
+                    <li>We also have calculated an effective rate of the bacterial growth. </li>
+                </ul>
+
+                <h1 class="h1_content">FUTURE SCOPES</h1>
+                <ul class="p_content">
+                    <li>
+                        With changing the reaction term and/or the diffusion constants, we can get a better numerical simulation. 
+                    </li>
+                    <li>
+                        We can add an inhibition term in the coupled equations to control the rate of bacterial growth and thus we can understand how the biocontrol agent may behave while used.  
+                    </li>
+                </ul>
+
+                <h1 class="h1_content">REFERENCES</h1>
+                <ol class="p_content">
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system">https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system</a>
+                    </li>
+                    <li>
+                        Manas K. Roy, Paromita Banerjee, Tapas K. Sengupta, Sushanta Dattagupta, “Glucose induced fractal colony pattern of Bacillus thuringiensis”, Journal of Theoretical Biology, Volume 265, Issue 3, 2010, Pages 389-395, ISSN 0022-5193, https://doi.org/10.1016/j.jtbi.2010.05.016.
+                    </li>
+                </ol>
+
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
+
+    <script src="../../old two/main.js"></script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true }
+            ]
+        });
+    </script>
+    <script src="../../old two/table.js"></script>
+    <script>
+        // Sample CSV data (you can replace this with your CSV file)
+        const csvData = `Name,URL,Description
+                        John,http://example.com/john,Software Engineer
+                        Alice,http://example.com/alice,Web Developer
+                        Bob,http://example.com/bob,Data Analyst`;
+
+        renderTable(csvData, 'csvTableContainer')
+    </script>
+    <script>
+        // $(document).ready(function (e) {
+        //     $('rect').on('focus', function (e) {
+        //         e.preventDefault();
+        //         alert($(this).attr('id'))
+        //         // $('.selection p').html($(this).attr('class'));
+        //     });
+
+        // });
+
+    </script>
+    <script src="../../old two/indexMaker.js"></script>
+    <script src="../../old two/grassAnimation.js"></script>
+</body>
+
+</html>
