@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IISER Kolkata | Description</title>
+
+    <link rel="stylesheet" href="../../old two/main.css">
+    <link rel="stylesheet" href="../../old two/description.css">
+    <link rel="stylesheet" href="../../old two/katex/katex.min.css">
+    <link rel="stylesheet" href="../../old two/grassAnimation.css">
+    <link rel="stylesheet" href="../../old two/hamburger.css">
+
+    <script src="../../old two/katex/katex.min.js"></script>
+    <script src="../../old two/katex/contrib/auto-render.min.js"></script>
+    <script src="../../old two/katex/contrib/mhchem.min.js"></script>
+
+    <script src="../../old two/js/jquery.min.js"></script>
+    <script src="../../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <script src='../../old two/js/sketch.min.js'></script>
+
+</head>
+
+<body>
+
+
+    <header class="nav_Container" id="nav_Container">
+        <nav class="menu--right" role="navigation">
+            <div class="menuToggle">
+                <input type="checkbox" onclick="hide()" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="menuItem">
+                    <ul class="clear_ul">
+                        <li><a href="#">PROJECT</a></li>
+                        <li><a href="#">WET LAB</a></li>
+                        <li><a href="#">DRY LAB</a></li>
+                        <li><a href="#">HUMAN PRACTICES</a></li>
+                        <li><a href="#">TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown hidden" id="dropdown">
+            <ul class="clear_ul" id="dropDown_ul">
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="" id="behind">
+        <h1 class="pgintro">
+            ENGINEERING
+        </h1>
+        <canvas id="test"></canvas>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <h1 class="h1_content">Biofilm Modeling</h1>
+
+    <div class="detailed_description_section">
+        <div class="sticky_index_container">
+            <div class="sticky_index">
+                <h1 class="h1Index">
+                    Contents
+                </h1>
+            </div>
+        </div>
+        <div class="content_container">
+            <div class="content_section" style="margin-top: 0;">
+                <h1 class="h1_content">Introduction</h1>
+                <p class="p_content">
+                    OMV stands for Outer Membrane Vesicles. In the natural state, gram negative bacteria spontaneously
+                    vesiculates from their outer membrane. This presents us with an unique opportunity to hijack the
+                    natural OMVs and use them as our Crispr delivery machine!
+                </p>
+                <img class="image_content" src="https://static.igem.wiki/teams/4781/wiki/website-images/model/omv.gif"
+                    alt="">
+                <p style="text-align: center;">Fig 1: schematic diagram of cas insertion and OMV formation in Xoo
+                </p>
+                <p class="p_content">
+                    But what are the probabilities associated with OMV formation or what fraction of the OMVs are
+                    picking up our cargo is unknown in literature. Hence we set forth to make a theoretical model for
+                    predicting the fraction of OMVs that will be loaded as a function of the rate associated with OMV
+                    formation in a cell.
+                </p>
+                <h1 class="h1_content">Objective</h1>
+                <p class="p_content">
+                    Our objective is to find the fraction of OMVs filled with FnCAS12a protein with the total number of
+                    OMVs formed as a function of the probability with which OMVs are formed in a cell in unit time.
+                </p>
+                <h1 class="h1_content">Components</h1>
+                <ol class="p_content">
+                    <li>
+                        1D lattice of \(N\) receptors where CAS protein can bind.
+                    </li>
+                    <li>
+                        Concentration of FnCAS12a protein as a function of time.
+                    </li>
+                    <li>
+                        Tuning parameter \(\lambda\).
+                    </li>
+                </ol>
+                
+                <h1 class="h1_content">Model</h1>
+                <h2 class="h2_content">Assumptions</h2>
+                <ul class="p_content">
+                    <li>                    Let us take a 1D chain of N receptors where FnCAS12a can bind.</li>
+                    <li>                    We know the concentration of FnCAS12a from the modeling of CRISPR circuits. For the sake of the simulation, we take a sigmoid function, which gives a good approximation of the number of FnCAS12a at any given time t.  </li>
+                    <li>                    Now, let us assume that the OMV formation process ullows a Gaussian distribution. We will be using the Metropolis algorithm to check if OMV has formed at a particular site. But before that we introduce a model parameter.</li>
+                </ul>
+
+                <h2 class="h2_content">Introduction of Model Parameter</h2>
+                <h2 class="h2_content">Implementing Metropolis</h2>
+                <ul class="p_content">
+                    <li>But, we do not fully discard the situation where  \(R\) does not lie inside the width \([-\lambda\sigma,\lambda\sigma]\). In this case, we again take a random number \(p\) within 0 and 1. If \(p\) is less than \(\frac{\lambda\sigma}{R}\), then OMV has formed at that particular site. This is the <b>Metropolis algorithm.</b>
+                    </li>
+                    <li>We assume that at any OMV forming region includes one and only one receptor site and one OMV can take only one CAS12a protein. </li>
+                    <li>Now, at a particular time \(t\), suppose the number of FnCAS12a is \(n\). We take two cases:                    
+                        <ul>
+                            <li>
+                                                            <b>Case 1:</b> \(n>N\): In this case, N numbers of CAS are attached to N receptors, and \(n-N\) numbers of Cas proteins are left, which will take part in the next time step. <br>As all the receptors are filled with Cas12a, we need to count only the number of OMVs formed at time \(t\).
+                            </li>
+                            <li>
+                                                            <b>Case 2:</b> \(n < N\\): In this case, all the Cas proteins are attached to the receptors. It is a bit complicated this time.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="p_content">
+                    <li>
+                        First, we randomly choose \(n\) sites out of N total sites where CAS12s are attached. Then, we do the same process as done in Case 1. Here, we count (i) the number of OMVs with the Cas system inserted and (ii) the number of OMVs without the Cas system.Now, at a particular time \(t$, suppose the number of FnCAS12a is \(n\). We take two cases: 
+                    </li>
+                    <ul>
+                        <li>
+                            <b>Case 1: \(n>N\):</b> In this case, \(N\) numbers of CAS proteins are attached to \(N\) receptors, and \(n-N\) numbers of Cas proteins are left, which will take part in the next time step. As all the receptors are filled with Cas12a, we need to count only the number of OMVs formed at time \(t$\). 
+                        </li>
+                        <li>
+                            <b>Case 2: \(n< N\): </b> In this case, all the Cas proteins are attached to the receptors. It is a bit complicated this time because all receptors are not bound with the Cas proteins. First, we randomly choose \(n\) sites out of total \(N\) sites where CAS12s are attached. Then, we do the same process as done in Case 1. Here, we count (i) the number of OMVs with the Cas system inserted in it and (ii) the number of OMVs without the Cas system.
+                        </li>
+                    </ul>
+                </ul>
+
+                <h1 class="h1_content">Results and plots</h1>
+                <ul class="p_content">
+                    <li>Varying \(\lambda\) from 0 to 3, we run the loop for 30 time steps (with step size = 0.1) for each \(\lambda\) and count the number of OMVs with and without Cas12s and calculate the fraction \(\frac{\text{OMV with Cas12}}{\text{Total no OMV}}\)</li>
+                    <li>For a specific \(\lambda\), we plot the fraction of Cas12 inserted into OMVs vs time.</li>
+                    <li>We also plot \(\lambda\) v/s the fraction of Cas12 inserted into OMVs for three different time stamps. </li>
+                </ul>
+
+                <img src="https://static.igem.wiki/teams/4781/wiki/website-images/model/omv-onelambda.png" alt="" class="image_content">
+                <p style="text-align: center;"><i>Fig 2: For a given \(\lambda\) we see, the fraction of FnCas12a increases</i></p>
+                
+                <img src="https://static.igem.wiki/teams/4781/wiki/website-images/model/omv-alllambda.png" alt="" class="image_content">
+                <p style="text-align: center;"><i>Fig 3: For three different timestamp, we see the fraction of FnCas12a saturates after a specific \(\lambda\) is reached.</i></p>
+
+                <p class="p_content">
+                    <a href="https://drive.google.com/file/d/1X6IBO9rdb2gCvLXYFw3Z7pwikxs7YWM2/view?usp=drive_link">(The codes can be found here)</a>.
+                </p>
+
+                <h1 class="h1_content">
+                    Conclusion
+                </h1>
+                <ol class="p_content">
+                    <li>
+                        We see as time progresses, for any value of lambda, the fraction of loaded OMVs increases.
+                    </li>
+                    <li>
+                        For a particular time step, increasing lambda increases the fraction for the range of \(\lambda \in [0,1.3]\). This is expected as we are taking \(\lambda\) no of standard deviations of the distribution, corresponding to a probability of 90.32% for \(\lambda = 1.3\). Hence after 1.3, the model is getting saturated as almost all the sites are producing OMVs all the time.
+                    </li>
+                    <li>
+                        Also, for later time (t > 240), we see the model does not show much sensitivity on \(\lambda\). This is because the Cas concentration function we have taken is a sigmoidal function and for such late time, the concentration is saturated hence almost all the receptors are filled with cas complex hence not much dependence on \(\lambda\) is observed.
+                    </li>
+                </ol>
+                <p class="p_content">
+                    Overall we see the model showing the desired features we expect from it. With the correct cas concentration function one can fit the experimental data of loaded OMV concentration and extract the value of $\lambda$ (hence corresponding probability of OMV formation at a given receptor in a given time step). This would be the final prediction of the model.
+                </p>
+
+                <h1 class="h1_content">
+                    Future Scopes
+                </h1>
+                <ol class="p_content">
+                    <li>
+                        We can vary the distributions from gaussian to other forms to get a better fit.
+                    </li>
+                    <li>
+                        Other monte carlo methods and statistical mechanics inspired methods can be implemented to get better results.
+                    </li>
+                </ol>
+
+                <h1 class="h1_content">
+                    Refrences
+                </h1>
+                <ol class="p_content">
+                    <li>
+                        Mordukhovich G, Bahar O. Isolation of Outer Membrane Vesicles from Phytopathogenic Xanthomonas campestris pv. campestris. Bio Protoc. 2017 Mar 5;7(5):e2160. doi: 10.21769/BioProtoc.2160. PMID: 34458473; PMCID: PMC8376552.                    
+                    </li>
+                </ol>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
+
+    <script src="../../old two/main.js"></script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true }
+            ]
+        });
+    </script>
+    <script src="../../old two/table.js"></script>
+    <script>
+        // Sample CSV data (you can replace this with your CSV file)
+        const csvData = `Name,URL,Description
+                        John,http://example.com/john,Software Engineer
+                        Alice,http://example.com/alice,Web Developer
+                        Bob,http://example.com/bob,Data Analyst`;
+
+        renderTable(csvData, 'csvTableContainer')
+    </script>
+    <script>
+        // $(document).ready(function (e) {
+        //     $('rect').on('focus', function (e) {
+        //         e.preventDefault();
+        //         alert($(this).attr('id'))
+        //         // $('.selection p').html($(this).attr('class'));
+        //     });
+
+        // });
+
+    </script>
+    <script src="../../old two/indexMaker.js"></script>
+    <script src="../../old two/grassAnimation.js"></script>
+</body>
+
+</html>
