@@ -1,0 +1,3 @@
+Parameter,Value
+β,0.15
+γ,0.003 when t<50 and 0.03 when t>50
