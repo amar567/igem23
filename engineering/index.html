@@ -1029,6 +1029,13 @@
                 dataType: "text",
                 success: function (data) { renderTablewithoutlinks(data, 'engineeringSuccess_pt2') }
             });
+        });$(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "../old two/csv/engineeringSuccess_pt2.csv",
+                dataType: "text",
+                success: function (data) { renderTablewithoutlinks(data, 'engineeringSuccess_pt2') }
+            });
         });
 
 
