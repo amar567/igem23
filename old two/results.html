@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IISER Kolkata | Contribution</title>
+
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./contribution.css" />
+    <link rel="stylesheet" href="./katex/katex.min.css" />
+    <link rel="stylesheet" href="./hovercard.css" />
+
+    <script src="./katex/katex.min.js"></script>
+    <script src="./katex/contrib/auto-render.min.js"></script>
+    <script src="./katex/contrib/mhchem.min.js"></script>
+    <script src="./tailwind.js"></script>
+
+    <script src="../old two/js/jquery.min.js"></script>
+    <script src="../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <link rel="stylesheet" href="../old two/hamburger.css">
+
+  </head>
+
+  <body>
+    <header class="nav_Container" id="nav_Container">
+        <nav class="menu--right" role="navigation">
+            <div class="menuToggle">
+                <input type="checkbox" onclick="hide()" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="menuItem">
+                    <ul class="clear_ul">
+                        <li><a href="#">PROJECT</a></li>
+                        <li><a href="#">WET LAB</a></li>
+                        <li><a href="#">DRY LAB</a></li>
+                        <li><a href="#">HUMAN PRACTICES</a></li>
+                        <li><a href="#">TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown hidden" id="dropdown">
+            <ul class="clear_ul" id="dropDown_ul">
+  
+            </ul>
+        </div>
+    </header>
+    <div class="" style="height: 100vh;width: 100%vw">
+        <img src="https://static.igem.wiki/teams/4781/wiki/thumbnails/21.png" alt="" style="width: 100vw;height: 100vh;">
+    </div>
+      <div>
+      </div>
+      <div class="pdfs_section mt-10">
+        <div class="sticky_index_container">
+          <div
+            class="sticky_index p-10"
+            style="
+              min-height: 500px;
+              box-shadow: -5px 6px 20px 0px #dad7d7;
+              border-radius: 10px;
+              cursor: pointer;
+            "
+          >
+            <h1 class="text-3xl">Contents</h1>
+            <div>
+                <h2>Phase 1</h2>
+                <h2>Phase 2</h2>
+                <h2>Phase 3</h2>
+                <h2>Notebook</h2>
+            </div>
+          </div>
+        </div>
+        <div class="content_container">
+          <div
+            class="content_section py-5"
+            style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius: 10px"
+          >
+            <h1 class="h1_content text-3xl font-semibold">Phase 1</h1>
+            <p class="p_content mt-5 text-2xl py-5">
+               The results of the phase 1 protocols are attached in the given pdf:
+            </p>
+           <p class="p_content mt-5 text-2xl py-5">
+            <embed src="https://static.igem.wiki/teams/4781/wiki/results/phase-1-results.pdf" width="80%" height="500px">
+           </p>
+
+        <h1 class="h1_content text-3xl font-semibold">Phase 2</h1>
+        <p class="p_content mt-5 text-2xl py-5">
+            <embed src="https://static.igem.wiki/teams/4781/wiki/results/phase-2-results-cloning.pdf" width="80%" height="500px"> 
+        </p>
+
+        <h1 class="h1_content text-3xl font-semibold">Phase 3</h1>
+        <p class="p_content mt-5 text-2xl py-5">
+            <embed src="https://static.igem.wiki/teams/4781/wiki/results/phase-3-results.pdf" width="80%" height="500px"> 
+        </p>
+
+        <h1 class="h1_content text-3xl font-semibold">Proof of Concept</h1>
+        <p class="p_content mt-5 text-2xl py-5">
+            <embed src="https://static.igem.wiki/teams/4781/wiki/proof-of-concept.pdf" width="80%" height="500px"> 
+        </p>
+
+        <h1 class="h1_content text-3xl font-semibold">Notebook</h1>
+        <p class="p_content mt-5 text-2xl py-5">
+            <embed src="https://static.igem.wiki/teams/4781/wiki/notebook.pdf" width="80%" height="500px"> 
+        </p>
+
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
+  </body>
+</html>
