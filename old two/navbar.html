@@ -1,308 +1,349 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./tailwind.js"></script>
-    <title>Document</title>
-  </head>
+<style>
+    :root{
+        --navbar-bg: #001E2B;
+        --navbar-text-color: #fff;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+  .container {
+    width: 1170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
-  <body class="p-2">
-    <nav class="relative z-50 mb-10">
-      <div
-        class="fixed hidden md:flex justify-between items-center bg-[#E3ABAB] left-2 right-2 rounded-md"
-      >
-        <div class="ml-4">LOGO</div>
-        <div class="mr-4 ml-auto relative">
-          <ul class="flex flex-row mr-10">
-            <li class="p-1 m-2 cursor-pointer relative group">Home</li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Project</span>
-              <ul
-                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    Description
-                  </li>
-                </a>
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    Design
-                  </li>
-                </a>
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    DBLT
-                  </li>
-                </a>
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    Contribution
-                  </li>
-                </a>
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    Engineeringn
-                  </li>
-                </a>
-                <a href="https://www.example.com">
-                  <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                    Implementation
-                  </li>
-                </a>
-              </ul>
-            </li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Wet Lab</span>
-              <ul
-                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Experiment
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Protocols
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Notebook
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Parts
-                </li>
-              </ul>
-            </li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Results</span>
-              <ul
-                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Wet Lab Resuts
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Proof of Concept
-                </li>
-              </ul>
-            </li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Human Practices</span>
-              <ul
-                class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  HD
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Eucation
-                </li>
-                <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                  Safety
-                </li>
-              </ul>
-            </li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer">Model</span>
-            </li>
-            <li class="p-1 m-2 relative group">
-              <span class="cursor-pointer" id="team">Team</span>
-              <ul
-              class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-              >
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">All Members</li>
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Attribution</li>
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Collaboration</li>
-            </ul>
-          </li>
-          <li class="p-1 m-2 relative group">
-            <span class="cursor-pointer">Awards</span>
-          </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    --navbar-bg: #001E2B;
+    --navbar-text-color: #fff;
+  }
+  .navbar,
+  .navbar > .container {
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    .navbar,
+    .navbar > .container {
+      display: block;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
 
-    <!-- Mobile navbar -->
+  .navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: var(--navbar-bg);
+    padding: 1rem 1.15rem;
+    /*
+          |-----------------------------------
+          | Start navbar logo or brand etc..
+          |-----------------------------------
+          */
+    /*
+          |-----------------------------------
+          | Start navbar menu
+          |-----------------------------------
+          */
+  }
+  @media (min-width: 576px) {
+    .navbar .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .navbar .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .navbar .container {
+      max-width: 1140px;
+    }
+  }
+  .navbar .navbar-header {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+  .navbar .navbar-header .navbar-toggler {
+    cursor: pointer;
+    border: none;
+    display: none;
+    outline: none;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-header .navbar-toggler {
+      display: block;
+    }
+  }
+  .navbar .navbar-header .navbar-toggler span {
+    height: 2px;
+    width: 22px;
+    background-color: var(--navbar-bg);
+    display: block;
+  }
+  .navbar .navbar-header .navbar-toggler span:not(:last-child) {
+    margin-bottom: 0.2rem;
+  }
+  .navbar .navbar-header > a {
+    font-weight: 500;
+    color: var(--navbar-bg);
+  }
+  .navbar .navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-menu {
+      display: none;
+      text-align: center;
+    }
+  }
+  .navbar .navbar-menu.active {
+    display: flex !important;
+  }
+  .navbar .navbar-menu .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav {
+      width: 100%;
+      display: block;
+      border-top: 1px solid #eee;
+      margin-top: 1rem;
+    }
+  }
+  .navbar .navbar-menu .navbar-nav > li > a {
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  .navbar .navbar-menu .navbar-nav > li > a:hover {
+    color: #66f;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav > li > a {
+      border-bottom: 1px solid #eceef3;
+    }
+  }
+  .navbar .navbar-menu .navbar-nav > li.active a {
+    color: #66f;
+  }
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    list-style: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: var(--navbar-bg);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-width: 160px;
+    width: auto;
+    white-space: nowrap;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    border-radius: 0.75rem;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+      position: relative;
+      box-shadow: none;
+    }
+  }
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+    color: var(--navbar-text-color);
+    padding: 0.25rem 1rem;
+    display: block;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a:hover {
+    color: #66f;
+}
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+    display: block !important;
+  }
+  .navbar .navbar-menu .navbar-nav .dropdown > .separator {
+    height: 1px;
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: var(--navbar-bg);
+  }
+  .navbar .navbar-dropdown {
+    position: relative;
+  }
 
-    <div class="bg-[#E3ABAB] rounded-lg">
-      <button id="mobile-menu-button" class="md:hidden block text-2xl p-2">
-        &#9776;
+  .navbar .navbar-header > a span {
+    color: #66f;
+  }
+
+  .navbar .navbar-header h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-header h4 {
+      font-size: 1.05rem;
+    }
+  }
+</style>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggler" data-toggle="open-navbar1">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
 
-    <div id="navbar" class="md:hidden mb-2">
-      <ul>
-        <li class="p-1 m-2 cursor-pointer relative toggle-submenu" id="home">
-          Home
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="project">
-          <span class="cursor-pointer">Project</span>
-          <ul
-            class="hidden absolute left-0 mt-0 bg-white border rounded-lg py-1 px-2 translate-x-40 -translate-y-8 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="project-sublist"
-          >
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Description
-              </li>
+    <div class="navbar-menu" id="open-navbar1">
+      <ul class="navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="project">
+              Project <i class="fa fa-angle-down"></i>
             </a>
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Design
-              </li>
+            <ul class="dropdown" id="project">
+              <li><a href="#">Description</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Contribution</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Awards</a></li>
+            </ul>
+          </li>
+        <li class="navbar-dropdown">
+          <a href="#" class="dropdown-toggler" data-dropdown="wet-lab">
+            Wet Lab <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown" id="wet-lab">
+            <li><a href="#">Engineering</a></li>
+          </ul>
+        </li>
+        <li class="navbar-dropdown">
+          <a href="#" class="dropdown-toggler" data-dropdown="dry-lab">
+            Dry Lab <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown" id="dry-lab">
+            <li><a href="#">Models</a></li>
+          </ul>
+        </li>
+        <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="hp">
+              Human Practices <i class="fa fa-angle-down"></i>
             </a>
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Engineering Success
-              </li>
+            <ul class="dropdown" id="hp">
+              <li><a href="#">Integrated Human Practices</a></li>
+              <li><a href="#">Education</a></li>
+            </ul>
+          </li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="team">
+              Team <i class="fa fa-angle-down"></i>
             </a>
-            <a href="https://www.example.com">
-              <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-                Proposed Implementation
-              </li>
-            </a>
-          </ul>
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="wetlab">
-          <span class="cursor-pointer">Wet Lab</span>
-          <ul
-            class="hidden absolute left-0 mt-4 bg-white border rounded-lg py-1 px-2 translate-x-40 -translate-y-8 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="wetlab-sublist"
-          >
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Experiment
-            </li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Protocols
-            </li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Notebook
-            </li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Parts
-            </li>
-          </ul>
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="results">
-          <span class="cursor-pointer">Results</span>
-          <ul
-            class="hidden absolute left-0 mt-4 bg-white border translate-x-40 -translate-y-8 rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="results-sublist"
-          >
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Wet Lab Reults</li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Proof of Concept
-            </li>
-          </ul>
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="humanpractices">
-          <span class="cursor-pointer">Human Practices</span>
-          <ul
-            class="hidden absolute left-0 mt-4 bg-white border translate-x-40 -translate-y-8 rounded-lg py-1 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="humanpractices-sublist"
-          >
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">Integrated Human Practices</li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Eucation
-            </li>
-            <li class="cursor-pointer rounded-md p-2 hover:bg-slate-200">
-              Safety
-            </li>
-          </ul>
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="drylab">
-          <span class="cursor-pointer">Model</span>
-        </li>
-        <li class="p-1 m-2 relative toggle-submenu" id="team">
-          <span class="cursor-pointer" >Team</span>
-          <ul
-            class="hidden absolute left-0 mt-0 bg-white translate-x-40 -translate-y-6 border rounded-lg py-0 px-2 space-y-3 w-40 opacity-100 transition-all duration-300"
-            id="team-sublist"
-          >
-            <li class="cursor-pointer toggle-submenu" id="model">All Members</li>
-            <li class="cursor-pointer toggle-submenu" id="model">Attribution</li>
-            <li class="cursor-pointer toggle-submenu" id="model">Collaboration</li>
-          </ul>
-        </li>
+            <ul class="dropdown" id="team">
+              <li><a href="#">Attributions</a></li>
+              <li><a href="#">Education</a></li>
+            </ul>
+          </li>
       </ul>
     </div>
+  </div>
+</nav>
 
-    <script>
-      const dropdownItems = document.querySelectorAll(".group");
-      let openSubmenu = null; // Track the currently open submenu
+<script>
+  // Other important pens.
+  // Map: https://codepen.io/themustafaomar/pen/ZEGJeZq
+  // Dashboard: https://codepen.io/themustafaomar/pen/jLMPKm
 
-      // Close the dropdown menu when clicking anywhere outside
-      document.addEventListener("click", (event) => {
-        if (openSubmenu && !event.target.closest(".group")) {
-          openSubmenu.classList.add("hidden");
-          openSubmenu = null;
+  let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
+  let dropdownIsOpen = false;
+
+  // Handle dropdown menues
+  if (dropdowns.length) {
+    // Usually I don't recommend doing this (adding many event listeners to elements have the same handler)
+    // Instead use event delegation: https://javascript.info/event-delegation
+    // Why: https://gomakethings.com/why-event-delegation-is-a-better-way-to-listen-for-events-in-vanilla-js
+    // But since we only have two dropdowns, no problem with that.
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", (event) => {
+        let target = document.querySelector(
+          `#${event.target.dataset.dropdown}`
+        );
+
+        if (target) {
+          if (target.classList.contains("show")) {
+            target.classList.remove("show");
+            dropdownIsOpen = false;
+          } else {
+            target.classList.add("show");
+            dropdownIsOpen = true;
+          }
         }
       });
+    });
+  }
 
-      dropdownItems.forEach((item) => {
-        item.addEventListener("click", (event) => {
-          const submenu = item.querySelector("ul");
-          const isSubitem = event.target.closest("ul") === submenu;
+  // Handle closing dropdowns if a user clicked the body
+  window.addEventListener("mouseup", (event) => {
+    if (dropdownIsOpen) {
+      dropdowns.forEach((dropdownButton) => {
+        let dropdown = document.querySelector(
+          `#${dropdownButton.dataset.dropdown}`
+        );
+        let targetIsDropdown = dropdown == event.target;
 
-          // Close the previously open submenu (if any) when clicking on a different item
-          if (!isSubitem && openSubmenu && openSubmenu !== submenu) {
-            openSubmenu.classList.add("hidden");
-          }
+        if (dropdownButton == event.target) {
+          return;
+        }
 
-          if (!isSubitem) {
-            submenu.classList.toggle("hidden");
-            openSubmenu = submenu;
-          }
-
-          event.stopPropagation(); // Prevent this click from propagating to the document
-        });
+        if (!targetIsDropdown && !dropdown.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
       });
+    }
+  });
 
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const navbar = document.getElementById("navbar");
+  // Open links in mobiles
+  function handleSmallScreens() {
+    document.querySelector(".navbar-toggler").addEventListener("click", () => {
+      let navbarMenu = document.querySelector(".navbar-menu");
 
-      mobileMenuButton.addEventListener("click", () => {
-        navbar.classList.toggle("hidden");
-      });
+      if (!navbarMenu.classList.contains("active")) {
+        navbarMenu.classList.add("active");
+      } else {
+        navbarMenu.classList.remove("active");
+      }
+    });
+  }
 
-      const toggleSubmenuItems = document.querySelectorAll(".toggle-submenu");
-      let openSubmenu2 = null; // Track the currently open submenu
-
-      toggleSubmenuItems.forEach((item) => {
-        // Get the ID of the list item
-        const itemId = item.getAttribute("id");
-
-        // Get the corresponding sublist using the ID
-        const sublist = document.getElementById(`${itemId}-sublist`);
-
-        const spanElement = item.querySelector("span");
-
-        // Add a click event listener to the list item
-        item.addEventListener("click", () => {
-          if (openSubmenu2 && openSubmenu2 !== sublist) {
-            // Close the previously open submenu
-            openSubmenu2.classList.add("hidden");
-            // Reset the underline animation for the previously open item
-            openSubmenu2.parentElement.classList.remove("active");
-          }
-
-          // Toggle the visibility of the clicked sublist
-          sublist.classList.toggle("hidden");
-
-          // Update the currently open submenu
-          openSubmenu2 = sublist;
-
-          // Apply the Tailwind CSS classes for the underline animation to the clicked item
-          spanElement.classList.add(
-            "border-b-2",
-            "border-transparent",
-            "hover:border-red-500",
-            "transition",
-            "duration-700",
-            "w-auto"
-          );
-        });
-      });
-    </script>
-  </body>
-</html>
+  handleSmallScreens();
+</script>
