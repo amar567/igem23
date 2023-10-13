@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IISER Kolkata | Contribution</title>
+
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../contribution.css" />
+    <link rel="stylesheet" href="../katex/katex.min.css" />
+    <link rel="stylesheet" href="../hovercard.css" />
+
+    <script src="../katex/katex.min.js"></script>
+    <script src="../katex/contrib/auto-render.min.js"></script>
+    <script src="../katex/contrib/mhchem.min.js"></script>
+    <script src="../tailwind.js"></script>
+
+    <script src="../../old two/js/jquery.min.js"></script>
+    <script src="../../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <link rel="stylesheet" href="../old two/hamburger.css">
+
+  </head>
+  <style>
+    .collapsable-boxes .box {
+      background-color: #001e2b;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .drop-down {
+      background-color: #e6e6e6;
+      overflow: hidden;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .drop-down .drop-down-content {
+      padding-bottom: 5rem;
+    }
+  </style>
+
+  <body>
+    <header class="nav_Container" id="nav_Container">
+      <nav class="menu--right" role="navigation">
+          <div class="menuToggle">
+              <input type="checkbox" onclick="hide()" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="menuItem">
+                  <ul class="clear_ul">
+                      <li><a href="#">PROJECT</a></li>
+                      <li><a href="#">WET LAB</a></li>
+                      <li><a href="#">DRY LAB</a></li>
+                      <li><a href="#">HUMAN PRACTICES</a></li>
+                      <li><a href="#">TEAM</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <div class="dropdown hidden" id="dropdown">
+          <ul class="clear_ul" id="dropDown_ul">
+
+          </ul>
+      </div>
+  </header>
+    <div class="" style="height: 100vh;width: 100%vw">
+      <img src="https://static.igem.wiki/teams/4781/wiki/thumbnails/11.png" alt="" style="width: 100vw;height: 100vh;">
+  </div>
+    <div class="main-container flex flex-col pt-10 px-20 w-full">
+      <div></div>
+      <div class="pdfs_section mt-10">
+        <div class="sticky_index_container">
+          <div
+            class="sticky_index p-10"
+            style="
+              min-height: 500px;
+              box-shadow: -5px 6px 20px 0px #dad7d7;
+              border-radius: 10px;
+              cursor: pointer;
+            "
+          >
+            <h1 class="text-3xl">Contents</h1>
+          </div>
+        </div>
+        <div class="content_container">
+          <div
+            class="content_section w-full py-5"
+            style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius: 10px"
+          >
+            <h1 class="h1_content text-3xl font-semibold">Materials</h1>
+            <div class="collapsable-boxes w-full flex flex-col">
+              <div class="box w-100 mx-10 mt-10 mb-0">
+                <div class="text-2xl m-10 text-white">Bacterial Strains</div>
+              </div>
+              <div class="drop-down mx-10 hidden">
+                <div class="drop-down-content">
+                  <div class="table" id="backteria_experments"></div>
+                </div>
+              </div>
+              <div class="box w-100 mx-10 mt-10 mb-0">
+                <div class="text-2xl m-10 text-white">Plasmids</div>
+              </div>
+              <div class="drop-down mx-10 hidden">
+                <div class="drop-down-content">
+                  <div class="table" id="plasmids_experiments"></div>
+                </div>
+              </div>
+              <div class="box w-100 mx-10 mt-10 mb-0">
+                <div class="text-2xl m-10 text-white">Primers</div>
+              </div>
+              <div class="drop-down mx-10 hidden">
+                <div class="drop-down-content">
+                  <div class="table" id="primers_experiments"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="content_section py-5"
+            style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius: 10px"
+          >
+            <h1 class="h1_content text-3xl font-semibold">Methods</h1>
+
+            <p class="p_content mt-5 text-2xl">
+              Phase 1: OMV Isolation and Characterization, Bacterial Growth
+              Curve
+            </p>
+            <embed
+              src="https://static.igem.wiki/teams/4781/wiki/experiments/phase-1.pdf
+            "
+              width="80%"
+              height="500px"
+            />
+
+            <p class="p_content mt-10 text-2xl">Phase 2: Cloning</p>
+            <embed
+              src="https://static.igem.wiki/teams/4781/wiki/experiments/phase-2.pdf
+            "
+              width="80%"
+              height="500px"
+            />
+
+            <p class="p_content mt-10 text-2xl">Phase 3: Fusion and Testing</p>
+            <embed
+              src="https://static.igem.wiki/teams/4781/wiki/experiments/phase-3.pdf
+            "
+              width="80%"
+              height="500px"
+            />
+          </div>
+          <div
+            class="content_section py-5"
+            style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius: 10px"
+          >
+            <h1 class="h1_content text-3xl font-semibold">References</h1>
+
+            <ul>
+              <li>
+                <a
+                  href="https://barricklab.org/twiki/bin/view/Lab/ProtocolsElectrocompetentCells "
+                  >1.
+                  https://barricklab.org/twiki/bin/view/Lab/ProtocolsElectrocompetentCells
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://lchenlab.sitehost.iu.edu/protocol_files/agarose_gel_extraction.pdf "
+                  >2.
+                  https://lchenlab.sitehost.iu.edu/protocol_files/agarose_gel_extraction.pdf
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://static.igem.org/mediawiki/2015/f/f5/UCSF_Colony_PCR_for_Screening_E.coli.pdf 
+                "
+                  >3.
+                  https://static.igem.org/mediawiki/2015/f/f5/UCSF_Colony_PCR_for_Screening_E.coli.pdf
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://barricklab.org/twiki/bin/view/Lab/ProtocolsElectrocompetentCells 
+ 
+ "
+                  >4.
+                  https://barricklab.org/twiki/bin/view/Lab/ProtocolsElectrocompetentCells
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neb.com/en/protocols/2015/11/20/monarch-plasmid-dna-miniprep-kit-protocol-t1010 ">5. https://www.neb.com/en/protocols/2015/11/20/monarch-plasmid-dna-miniprep-kit-protocol-t1010 </a>
+              </li>
+              <li>
+                <a href="https://www.neb.com/en/protocols/2014/11/26/nebuilder-hifi-dna-assembly-reaction-protocol 
+                ">6. https://www.neb.com/en/protocols/2014/11/26/nebuilder-hifi-dna-assembly-reaction-protocol 
+              </a>
+              </li>
+              <li>
+                <a href="https://www.neb.com/en/protocols/0001/01/01/high-efficiency-transformation-protocol-c3019 
+                ">7. https://www.neb.com/en/protocols/0001/01/01/high-efficiency-transformation-protocol-c3019 
+              </a>
+              </li>
+              <li>
+                <a href="https://static.igem.org/mediawiki/2014/9/94/TU_Eindhoven_Protocol_Double_Transformation.pdf
+                ">8. https://static.igem.org/mediawiki/2014/9/94/TU_Eindhoven_Protocol_Double_Transformation.pdf
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: true },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          {
+            left: "\\begin{equation}",
+            right: "\\end{equation}",
+            display: true,
+          },
+        ],
+      });
+    </script>
+    <script src="../indexMaker.js"></script>
+    <!-- contributions_table1.csv -->
+    <script src="../../old two/table.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "../../old two/csv/plasmids-experiments.csv",
+          dataType: "text",
+          success: function (data) {
+            renderTablewithoutlinks(data, "plasmids_experiments");
+          },
+        });
+      });
+      // Create a new instance of the FileReader() object
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "../../old two/csv/primers-experiments.csv",
+          dataType: "text",
+          success: function (data) {
+            renderTablewithoutlinks(data, "primers_experiments");
+          },
+        });
+      });
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "../../old two/csv/backteria-experiments.csv",
+          dataType: "text",
+          success: function (data) {
+            renderTablewithoutlinks(data, "backteria_experments");
+          },
+        });
+      });
+
+      // let csvData2 =
+    </script>
+    <script>
+      const boxes = document.querySelectorAll(".box");
+      boxes.forEach((box) => {
+        box.addEventListener("click", () => {
+          box.nextElementSibling.classList.toggle("hidden");
+          boxes.forEach((otherBox) => {
+            if (otherBox !== box)
+              otherBox.nextElementSibling.classList.add("hidden");
+          });
+          box.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+    <script>
+
+      let nav = {
+          "PROJECT": {
+              "Description": "https://example.com/",
+              "Implementation": "https://example.com/",
+              "Contribution": "https://example.com/",
+              "Graphic Design": "https://example.com/",
+              "Awards": "https://example.com/"
+          },
+          "WET LAB": {
+              "Design": "https://example.com/",
+              "Experiments": "https://example.com/",
+              "Results": "https://example.com/",
+              "Engineering": "https://example.com/",
+              "Parts": "https://example.com/",
+              "Safety": "https://example.com/"
+          },
+          "DRY LAB": {
+              "Model": "https://example.com/",
+              "Software": "https://example.com/",
+              "Hardware": "https://example.com/",
+              "Measurement": "https://example.com/"
+          },
+          "HUMAN PRACTICES": {
+              "Integrated Human Practices": "https://example.com/",
+              "Education & Public Engagement": "https://example.com/",
+              "The 6th SynBio Sense": "https://example.com/"
+          },
+          "TEAM": {
+              "Members": "https://example.com/",
+              "Collaborations": "https://example.com/",
+              "Attributions": "https://example.com/"
+          }
+      }
+
+
+      $(".clear_ul li").hover(function () {
+          var isHovered = $(this).is(":hover");
+          if (isHovered) {
+              console.log(Object.keys(nav[this.children[0].innerHTML]));
+              let dropdown = document.getElementById('dropDown_ul')
+              dropdown.innerHTML = ''
+              for (const key in nav[this.children[0].innerHTML]) {
+                  dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+              }
+              // Object.keys(nav[this.children[0].innerHTML])
+              document.getElementById('dropdown').classList.add("visible")
+              document.getElementById('dropdown').classList.remove("hidden")
+          } else {
+              // document.getElementById('dropdown').innerHTML = "https://example.com/"
+          }
+      });
+
+      function hide() {
+          if (document.getElementById('dropdown').classList.contains('visible')) {
+              document.getElementById('dropdown').classList.remove("visble")
+              document.getElementById('dropdown').classList.add("hidden")
+          }
+      }
+
+  </script>
+  </body>
+</html>

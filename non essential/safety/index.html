@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IISER Kolkata | Contribution</title>
+
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./contribution.css" />
+    <link rel="stylesheet" href="./katex/katex.min.css" />
+    <link rel="stylesheet" href="./hovercard.css" />
+
+    <script src="./katex/katex.min.js"></script>
+    <script src="./katex/contrib/auto-render.min.js"></script>
+    <script src="./katex/contrib/mhchem.min.js"></script>
+    <script src="./tailwind.js"></script>
+
+    <script src="../old two/js/jquery.min.js"></script>
+    <script src="../old two/js/jquery.rwdImageMaps_lq5sye.js"></script>
+    <link rel="stylesheet" href="../old two/hamburger.css">
+
+  </head>
+
+  <body>
+    <header class="nav_Container" id="nav_Container">
+        <nav class="menu--right" role="navigation">
+            <div class="menuToggle">
+                <input type="checkbox" onclick="hide()" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="menuItem">
+                    <ul class="clear_ul">
+                        <li><a href="#">PROJECT</a></li>
+                        <li><a href="#">WET LAB</a></li>
+                        <li><a href="#">DRY LAB</a></li>
+                        <li><a href="#">HUMAN PRACTICES</a></li>
+                        <li><a href="#">TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown hidden" id="dropdown">
+            <ul class="clear_ul" id="dropDown_ul">
+  
+            </ul>
+        </div>
+    </header>
+    <div class="" style="height: 100vh;width: 100%vw">
+        <img src="https://static.igem.wiki/teams/4781/wiki/thumbnails/14.png" alt="" style="width: 100vw;height: 100vh;">
+    </div>
+      <div>
+      </div>
+      <div class="pdfs_section mt-10">
+        <div class="sticky_index_container">
+          <div
+            class="sticky_index p-10"
+            style="
+              min-height: 500px;
+              box-shadow: -5px 6px 20px 0px #dad7d7;
+              border-radius: 10px;
+              cursor: pointer;
+            "
+          >
+            <h1 class="text-3xl">Contents</h1>
+            <div>
+                <h2>Kill Switch</h2>
+                <h2>Safety</h2>
+                <h2>Safety Protocols and guidelines followed</h2>
+            </div>
+          </div>
+        </div>
+        <div class="content_container">
+          <div
+            class="content_section py-5"
+            style="box-shadow: -5px 6px 20px 0px #dad7d7; border-radius: 10px"
+          >
+            <h1 class="h1_content text-3xl font-semibold">KILL SWITCH</h1>
+            <p class="p_content mt-5 text-2xl">
+                We plan to have two different genetically modified E.coli. Population 1 that we call the Defenders, which produces Cas protein from the beginning. Population 2 that we call the Maintainers, produce Cas protein only when the population of E.coli is high. Since the Cas protein production would put heavy metabolic load on the bacterial cell, its growth would be heavily impacted and there won’t be an increase in E.coli population. To ensure that this does not happen, we propose the two different populations. The Defenders don’t grow much but they ensure a better condition for the Maintainers by effectively reducing the Xoo population. The Maintainers divide, increase and take over the role of eliminating Xoo from the plant. [Xoo refers to Xanthomonas oryzae pv. Oryzae ]
+            </p>
+            <div class="h1_content text-3xl font-semibold">The Defenders   (population 1)  </div>
+            <p class="p_content mt-5 text-2xl">
+                There are three plasmids (why three, because it gives control over copy number) which will be transformed into our E.coli. They are DSF, A (Kill state), B (Cas state). The diagrams show the different components of the circuit. We plan to create a single input toggle switch where the input shall be DSF (quorum sensing molecule of Xoo).
+
+            </p>
+
+            <h1  class="h1_content text-3xl font-semibold">Initial state: DSF high          </h1>
+
+            <p class="h1_content text-2xl">
+                DSF high Riboswitch (previously described in detection circuit) makes sRNA which are constitutively produced active to sequester the lacI mRNA 
+
+
+                <br>
+                B (Cas state) is transcribed freely resulting into repression of A (kill state) using tetR which is a strong repressor, moreover due to addition of promoter of lsrR, which is activated by AI-2, a quorum sensing molecule of E.coli in an AND gate with the Ptet promoter, only high population and no TetR would activate the kill state
+
+                <br>
+
+                Death of Xoo
+
+                
+            </p>
+
+            <h1  class="h1_content text-3xl font-semibold">Final state: DSF low
+            </h1>
+            <p class="h1_content text-2xl">
+                DSF low 
+                <br>
+Repression through LacI of B circuit possible
+Due to metabolic stress, reduction of B circuit product formation( since Cas protein induces metabolic stress)(hypothesis) 
+<br>
+This slowly leads to a switching to the kill state, since the TetR production lowers
+The Kill state produces Guide RNA (gRNA) which are specific to E.coli genes essential for survival
+These gRNA bind to the Cas protein already produced by circuit B near its vicinity, silencing its own genes and killing it off.
+
+            </p>
+
+
+            <p class="p_content mt-5 text-2xl">
+                Note: B (cas state) circuit has gRNA specific to Xoo while circuit A (kill state) has gRNA specific to E.coli. Circuit B also contains sequence for a signal peptide and a linker protein.
+
+
+<img src="https://static.igem.wiki/teams/4781/wiki/pop1.png" alt="" width="80%">
+            </p>
+
+            
+
+            <h1 class="h1_content text-3xl font-semibold">The Maintainers (Population 2)</h1>
+
+            <p class="p_content mt-5 text-2xl">There are three plasmids as before DSF, A (kill state), B (Cas state). DSF circuit and circuit A(kill state)  is same as those in population 1( Defenders) , performing the same task. The only difference is that in the circuit B, the promoter of lsrR has been incorporated in AND gate conformation with Plac promoter. This ensures that Cas protein production only takes place when population is high. Rest of its functioning remains the same as above.  
+
+                <img src="https://static.igem.wiki/teams/4781/wiki/screenshot-2023-10-12-184810.png" alt="" width="80%">
+            </p>
+
+            <h1  class="h1_content text-3xl font-semibold py-5">DON’T KNOWS            </h1>
+            <p class="h1_content text-2xl">
+                ·       Will such a switch due to metabolic stress even take place, and how will it be quantified?
+                <br>
+                ·       What and how of sRNA needs to investigated deeper.
+                <br>
+                ·       AND gate formation using a sequence overlap of promoters, will it work?
+                <br>
+                ·   Will the sharing of resources in the form of Cas protein between the two states be realized?
+                
+            </p>
+
+            
+           <h1 class="h1_content text-5xl py-10 font-semibold"> Safety Protocols and guidelines followed:</h1>
+            <p class="h1_content text-2xl">
+<br>
+The Department of Biotechnology (DBT) under the Government of India oversees biosafety and biosecurity regulations for research laboratories within the country. The comprehensive rules and regulations concerning laboratory safety can be accessed through this link. Moreover, IISER Kolkata has established its own set of laboratory safety guidelines, devised by the Institutional Biosafety Committee (IBSC). These guidelines are instrumental in maintaining a secure laboratory work environment, minimizing the risk of accidents, and emphasizing the advantages of a safe work environment by mitigating hazards to the working personnel. The team initially underwent rigorous lab safety training, guided by Dr. G. Lekha, focusing on understanding the do's and don'ts of lab safety.
+<br>
+The training encompassed proper handling and disposal procedures for various materials, including biosafety hazards. Additionally, it aimed to instil a positive attitude toward safety in laboratory operations. The team received orientation on the location and usage of fire extinguishers, chemical extinguishers, emergency showers, and eyewash stations. Precautions were taken to fumigate the working labs initially to eliminate any potential airborne pathogens. Wetlab activities were conducted in the Teaching and Research complex across three laboratories, including the lab of our Principal Investigator, Dr. Supratim Datta. Our experimental designs strictly adhere to general safety protocols.
+<br>
+BSL-1 Safety: All experiments related to cloning the quorum-sensing unit for our project are categorized as BSL-1 and are conducted in the designated BSL-1 laboratory following the prescribed guidelines. The quorum-sensing unit cloning involves the use of BSL-1 bacteria, such as E. coli DH5α and E. coli BL21 for subsequent expression. The chassis organism, Xanthomonas oryzae pv oryzae, utilized in later stages, also falls within the BSL-1 category. Class biosafety cabinets are employed for all these experiments.
+            </p>
+
+            <h1  class="h1_content text-3xl font-semibold py-5">REFERENCES          </h1>
+
+            <p class="h1_content text-2xl">
+                1.      Gardner, T., Cantor, C. & Collins, J. Construction of a genetic toggle switch in Escherichia coli. Nature 403, 339–342 (2000). <a href="https://doi.org/10.1038/35002131">https://doi.org/10.1038/35002131</a>
+
+                <br>
+                2.       Chan, C., Lee, J., Cameron, D. et al. 'Deadman' and 'Passcode' microbial kill switches for bacterial containment. Nat Chem Biol 12, 82–86 (2016). <a href="https://doi.org/10.1038/nchembio.1979">https://doi.org/10.1038/nchembio.1979</a>
+
+                
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+        let nav = {
+            "PROJECT": {
+                "Description": "https://example.com/",
+                "Implementation": "https://example.com/",
+                "Contribution": "https://example.com/",
+                "Graphic Design": "https://example.com/",
+                "Awards": "https://example.com/"
+            },
+            "WET LAB": {
+                "Design": "https://example.com/",
+                "Experiments": "https://example.com/",
+                "Results": "https://example.com/",
+                "Engineering": "https://example.com/",
+                "Parts": "https://example.com/",
+                "Safety": "https://example.com/"
+            },
+            "DRY LAB": {
+                "Model": "https://example.com/",
+                "Software": "https://example.com/",
+                "Hardware": "https://example.com/",
+                "Measurement": "https://example.com/"
+            },
+            "HUMAN PRACTICES": {
+                "Integrated Human Practices": "https://example.com/",
+                "Education & Public Engagement": "https://example.com/",
+                "The 6th SynBio Sense": "https://example.com/"
+            },
+            "TEAM": {
+                "Members": "https://example.com/",
+                "Collaborations": "https://example.com/",
+                "Attributions": "https://example.com/"
+            }
+        }
+
+
+        $(".clear_ul li").hover(function () {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                console.log(Object.keys(nav[this.children[0].innerHTML]));
+                let dropdown = document.getElementById('dropDown_ul')
+                dropdown.innerHTML = ''
+                for (const key in nav[this.children[0].innerHTML]) {
+                    dropdown.innerHTML += `<li><a href="${nav[this.children[0].innerHTML][key]}">${key}</a></li>`
+                }
+                // Object.keys(nav[this.children[0].innerHTML])
+                document.getElementById('dropdown').classList.add("visible")
+                document.getElementById('dropdown').classList.remove("hidden")
+            } else {
+                // document.getElementById('dropdown').innerHTML = "https://example.com/"
+            }
+        });
+
+        function hide() {
+            if (document.getElementById('dropdown').classList.contains('visible')) {
+                document.getElementById('dropdown').classList.remove("visble")
+                document.getElementById('dropdown').classList.add("hidden")
+            }
+        }
+
+    </script>
+  </body>
+</html>
