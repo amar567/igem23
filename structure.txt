@@ -25,10 +25,10 @@ TEAM
 
 ----------------------------------------------
 
-Description
-Engineering
-Contribution
-Model
+Description[-]
+Engineering[-]
+Contribution[-]
+Model[----]
 Human Practices
 Education
 Attributions
